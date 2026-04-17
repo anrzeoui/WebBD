@@ -1,4 +1,3 @@
-/* RESET & ГЛОБАЛ */
 * {
   box-sizing: border-box;
   margin: 0;
@@ -16,14 +15,13 @@ a {
   color: inherit;
 }
 
-/* MAIN LAYOUT */
+
 .admin-layout {
   display: flex;
   height: 100vh;
   overflow: hidden;
 }
 
-/* SIDEBAR */
 .sidebar {
   width: 250px;
   background-color: #1e1e2d;
@@ -62,7 +60,7 @@ a {
 .sidebar-menu li a:hover, .sidebar-menu li a.active {
   background-color: #1b1b28;
   color: #ffffff;
-  border-left: 4px solid #7e2cc9; /* Shoppy өнгө ашиглав */
+  border-left: 4px solid #7e2cc9; 
 }
 
 .sidebar-footer {
@@ -76,7 +74,6 @@ a {
   color: #ff6f61;
 }
 
-/* MAIN WRAPPER */
 .main-wrapper {
   flex: 1;
   display: flex;
@@ -84,7 +81,7 @@ a {
   overflow-y: auto;
 }
 
-/* TOPBAR */
+
 .topbar {
   background-color: #ffffff;
   height: 70px;
@@ -149,7 +146,7 @@ a {
   font-weight: bold;
 }
 
-/* CONTENT AREA */
+
 .content-area {
   padding: 30px;
 }
@@ -238,15 +235,3 @@ a {
 .badge.warning { background-color: #fff3cd; color: #ffc107; }
 .badge.danger { background-color: #fdeaea; color: #dc3545; }
 
-/* RESPONSIVE */
-@media (max-width: 768px) {
-  .sidebar {
-    width: 60px; /* Утас дээр зөвхөн icon харагдахаар жижигрүүлэх гэх мэт хөгжүүлж болно */
-  }
-  .sidebar-header h2, .sidebar-menu li a span {
-    display: none;
-  }
-  .topbar-search input {
-    width: 120px;
-  }
-}
