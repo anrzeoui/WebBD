@@ -237,16 +237,3 @@ a {
 .badge.success { background-color: #e0f8e9; color: #28a745; }
 .badge.warning { background-color: #fff3cd; color: #ffc107; }
 .badge.danger { background-color: #fdeaea; color: #dc3545; }
-
-/* RESPONSIVE */
-@media (max-width: 768px) {
-  .sidebar {
-    width: 60px; /* Утас дээр зөвхөн icon харагдахаар жижигрүүлэх гэх мэт хөгжүүлж болно */
-  }
-  .sidebar-header h2, .sidebar-menu li a span {
-    display: none;
-  }
-  .topbar-search input {
-    width: 120px;
-  }
-}
