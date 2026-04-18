@@ -7,46 +7,486 @@
   <link rel="stylesheet" href="style1.css">
 </head>
 <body>
-
   <div class="admin-layout">
-    
     <aside class="sidebar">
       <div class="sidebar-header">
+        <p class="sidebar-label">Удирдлагын хэсэг</p>
         <h2>Shoppy Admin</h2>
       </div>
+
       <ul class="sidebar-menu">
-        <li><a href="#" class="active">Барааны ангилал</a></li>
-        <li><a href="#">Барааны жагсаалт</a></li>
-        <li><a href="#">Захиалгын жагсаалт</a></li>
-        <li><a href="#">Үйлүүлэгчийн жагсаалт</a></li>
-        <li><a href="#">Төлбөрийн жагсаалт</a></li>
-        <li><a href="#">Мэдээллийн жагсаалт</a></li>
+        <li><button class="tab-link active" data-tab="categories">Барааны ангилал</button></li>
+        <li><button class="tab-link" data-tab="products">Барааны жагсаалт</button></li>
+        <li><button class="tab-link" data-tab="orders">Захиалгын жагсаалт</button></li>
+        <li><button class="tab-link" data-tab="customers">Хэрэглэгчдийн жагсаалт</button></li>
+        <li><button class="tab-link" data-tab="payments">Төлбөрийн жагсаалт</button></li>
+        <li><button class="tab-link" data-tab="news">Мэдээ, зарлал</button></li>
       </ul>
+
       <div class="sidebar-footer">
-        <a href="#">🚪 Гарах</a>
+        <a href="#">Гарах</a>
       </div>
     </aside>
 
     <div class="main-wrapper">
-      
       <header class="topbar">
         <div class="topbar-search">
-          <input type="text" placeholder="Хайх...">
-          <button>🔍</button>
+          <input type="text" placeholder="Ангилал, бараа, захиалга хайх...">
+          <button type="button">Хайх</button>
         </div>
+
         <div class="topbar-actions">
-          <button class="icon-btn">🔔</button>  
+          <button class="icon-btn" type="button">Мэдэгдэл</button>
           <div class="admin-profile">
-            <div class="avatar">А</div>
-            <span>Супер Админ</span>
+            <div class="avatar">A</div>
+            <div>
+              <strong>Супер админ</strong>
+              <p>Өнөөдрийн хяналтын самбар</p>
+            </div>
           </div>
         </div>
       </header>
 
-      <main class="content-area"></main>
+      <main class="content-area">
+        <section class="tab-panel active" id="categories">
+          <div class="page-header">
+            <div>
+              <p class="eyebrow">Админ самбар</p>
+              <h1>Барааны ангиллын удирдлага</h1>
+              <p>Ангилал үүсгэх, эрэмбэлэх, идэвхтэй эсэхийг удирдах хэсэг.</p>
+            </div>
+            <button class="primary-btn" type="button">Шинэ ангилал нэмэх</button>
+          </div>
 
+          <div class="stats-grid">
+            <article class="stat-card">
+              <h3>Нийт ангилал</h3>
+              <div class="stat-value">18</div>
+              <p>3 үндсэн, 15 дэд ангилал</p>
+            </article>
+            <article class="stat-card">
+              <h3>Идэвхтэй</h3>
+              <div class="stat-value">16</div>
+              <p>Сүүлийн 7 хоногт 2 ангилал шинэчлэгдсэн</p>
+            </article>
+            <article class="stat-card">
+              <h3>Онцлох ангилал</h3>
+              <div class="stat-value">6</div>
+              <p>Нүүр хуудсанд харагдаж байгаа</p>
+            </article>
+          </div>
+
+          <div class="content-grid">
+            <section class="table-section">
+              <div class="section-head">
+                <h2>Ангиллын жагсаалт</h2>
+                <span class="section-meta">Сүүлд шинэчлэгдсэн: 2026-04-18</span>
+              </div>
+              <table class="admin-table">
+                <thead>
+                  <tr>
+                    <th>Ангилал</th>
+                    <th>Дэд ангилал</th>
+                    <th>Бараа</th>
+                    <th>Төлөв</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Электроник</td>
+                    <td>6</td>
+                    <td>148</td>
+                    <td><span class="badge success">Идэвхтэй</span></td>
+                  </tr>
+                  <tr>
+                    <td>Гоо сайхан</td>
+                    <td>4</td>
+                    <td>92</td>
+                    <td><span class="badge success">Идэвхтэй</span></td>
+                  </tr>
+                  <tr>
+                    <td>Хүүхдийн бараа</td>
+                    <td>3</td>
+                    <td>61</td>
+                    <td><span class="badge warning">Шинэчилж байна</span></td>
+                  </tr>
+                  <tr>
+                    <td>Гэр ахуй</td>
+                    <td>2</td>
+                    <td>37</td>
+                    <td><span class="badge danger">Түр нуусан</span></td>
+                  </tr>
+                </tbody>
+              </table>
+            </section>
+
+            <aside class="side-card">
+              <h2>Түргэн үйлдэл</h2>
+              <form class="mini-form">
+                <label for="category-name">Ангиллын нэр</label>
+                <input id="category-name" type="text" placeholder="Жишээ: Спорт">
+                <label for="category-parent">Эцэг ангилал</label>
+                <select id="category-parent">
+                  <option>Үндсэн ангилал</option>
+                  <option>Электроник</option>
+                  <option>Гоо сайхан</option>
+                  <option>Эрэгтэй хувцас</option>
+                  <option>Эмэгтэй хувцас</option>
+                </select>
+                <button class="primary-btn full-width" type="button">Хадгалах</button>
+              </form>
+            </aside>
+          </div>
+        </section>
+
+        <section class="tab-panel" id="products">
+          <div class="page-header">
+            <div>
+              <p class="eyebrow">Барааны сан</p>
+              <h1>Барааны жагсаалт</h1>
+              <p>Үлдэгдэл, үнэ, нийлүүлэгч болон онцлох статусыг хянах хэсэг.</p>
+            </div>
+            <button class="primary-btn" type="button">Шинэ бараа бүртгэх</button>
+          </div>
+
+          <div class="stats-grid">
+            <article class="stat-card">
+              <h3>Нийт бараа</h3>
+              <div class="stat-value">1,248</div>
+              <p>Сүүлийн 24 цагт 19 бараа нэмэгдсэн</p>
+            </article>
+            <article class="stat-card">
+              <h3>Дуусах дөхсөн</h3>
+              <div class="stat-value">34</div>
+              <p>10-аас доош үлдэгдэлтэй</p>
+            </article>
+            <article class="stat-card">
+              <h3>Онцлох бараа</h3>
+              <div class="stat-value">12</div>
+              <p>Маркетингийн нүүрэнд байршуулсан</p>
+            </article>
+          </div>
+
+          <section class="table-section">
+            <div class="section-head">
+              <h2>Сүүлд шинэчлэгдсэн бараанууд</h2>
+              <span class="section-meta">6 мөр харуулж байна</span>
+            </div>
+            <table class="admin-table">
+              <thead>
+                <tr>
+                  <th>Бараа</th>
+                  <th>Ангилал</th>
+                  <th>Үнэ</th>
+                  <th>Үлдэгдэл</th>
+                  <th>Төлөв</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>iPhone 15 Case</td>
+                  <td>Электроник</td>
+                  <td>49,900₮</td>
+                  <td>84</td>
+                  <td><span class="badge success">Зарагдаж байна</span></td>
+                </tr>
+                <tr>
+                  <td>Vitamin C Serum</td>
+                  <td>Гоо сайхан</td>
+                  <td>39,000₮</td>
+                  <td>9</td>
+                  <td><span class="badge warning">Дуусах дөхсөн</span></td>
+                </tr>
+                <tr>
+                  <td>Bluetooth Speaker</td>
+                  <td>Электроник</td>
+                  <td>129,000₮</td>
+                  <td>0</td>
+                  <td><span class="badge danger">Дууссан</span></td>
+                </tr>
+              </tbody>
+            </table>
+          </section>
+        </section>
+
+        <section class="tab-panel" id="orders">
+          <div class="page-header">
+            <div>
+              <p class="eyebrow">Захиалга</p>
+              <h1>Захиалгын жагсаалт</h1>
+              <p>Шинэ, хүргэлтэнд гарсан болон дууссан захиалгыг хянах хэсэг.</p>
+            </div>
+            <button class="primary-btn" type="button">Тайлан татах</button>
+          </div>
+
+          <div class="stats-grid">
+            <article class="stat-card">
+              <h3>Өнөөдрийн захиалга</h3>
+              <div class="stat-value">86</div>
+              <p>Өчигдрөөс 14%-иар өссөн</p>
+            </article>
+            <article class="stat-card">
+              <h3>Хүргэлтэнд</h3>
+              <div class="stat-value">29</div>
+              <p>Замд яваа илгээмжүүд</p>
+            </article>
+            <article class="stat-card">
+              <h3>Цуцлагдсан</h3>
+              <div class="stat-value">4</div>
+              <p>Шийдвэр хүлээж буй 1 кейс байна</p>
+            </article>
+          </div>
+
+          <section class="table-section">
+            <div class="section-head">
+              <h2>Шинэ захиалгууд</h2>
+              <span class="section-meta">Өнөөдрийн realtime төлөв</span>
+            </div>
+            <table class="admin-table">
+              <thead>
+                <tr>
+                  <th>Захиалга #</th>
+                  <th>Хэрэглэгч</th>
+                  <th>Дүн</th>
+                  <th>Хүргэлт</th>
+                  <th>Төлөв</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>#SO-24018</td>
+                  <td>Э. Анужин</td>
+                  <td>179,000₮</td>
+                  <td>УБ, ХУД</td>
+                  <td><span class="badge warning">Бэлтгэж байна</span></td>
+                </tr>
+                <tr>
+                  <td>#SO-24017</td>
+                  <td>Б. Тэмүүлэн</td>
+                  <td>82,500₮</td>
+                  <td>Дархан</td>
+                  <td><span class="badge success">Хүргэлтэнд</span></td>
+                </tr>
+                <tr>
+                  <td>#SO-24016</td>
+                  <td>С. Намуун</td>
+                  <td>244,000₮</td>
+                  <td>Эрдэнэт</td>
+                  <td><span class="badge success">Хүлээлгэн өгсөн</span></td>
+                </tr>
+              </tbody>
+            </table>
+          </section>
+        </section>
+
+        <section class="tab-panel" id="customers">
+          <div class="page-header">
+            <div>
+              <p class="eyebrow">Хэрэглэгч</p>
+              <h1>Хэрэглэгчдийн жагсаалт</h1>
+              <p>Шинэ бүртгэл, VIP хэрэглэгч, санал хүсэлтийн идэвхийг харах хэсэг.</p>
+            </div>
+            <button class="primary-btn" type="button">Шинэ хэрэглэгч урих</button>
+          </div>
+
+          <div class="content-grid">
+            <section class="table-section">
+              <div class="section-head">
+                <h2>Идэвхтэй хэрэглэгчид</h2>
+                <span class="section-meta">Сүүлийн 30 хоног</span>
+              </div>
+              <table class="admin-table">
+                <thead>
+                  <tr>
+                    <th>Нэр</th>
+                    <th>И-мэйл</th>
+                    <th>Захиалга</th>
+                    <th>Түвшин</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>О. Болормаа</td>
+                    <td>bolor@example.mn</td>
+                    <td>24</td>
+                    <td><span class="badge success">VIP</span></td>
+                  </tr>
+                  <tr>
+                    <td>Ж. Бат-Эрдэнэ</td>
+                    <td>bataa@example.mn</td>
+                    <td>8</td>
+                    <td><span class="badge warning">Идэвхтэй</span></td>
+                  </tr>
+                  <tr>
+                    <td>М. Номин</td>
+                    <td>nomin@example.mn</td>
+                    <td>2</td>
+                    <td><span class="badge danger">Шинэ</span></td>
+                  </tr>
+                </tbody>
+              </table>
+            </section>
+
+            <aside class="side-card">
+              <h2>Хэрэглэгчийн үзүүлэлт</h2>
+              <ul class="metric-list">
+                <li><strong>Нийт хэрэглэгч:</strong> 8,420</li>
+                <li><strong>Шинэ бүртгэл:</strong> 126</li>
+                <li><strong>Давтан худалдан авалт:</strong> 42%</li>
+                <li><strong>VIP хэрэглэгч:</strong> 314</li>
+              </ul>
+            </aside>
+          </div>
+        </section>
+
+        <section class="tab-panel" id="payments">
+          <div class="page-header">
+            <div>
+              <p class="eyebrow">Санхүү</p>
+              <h1>Төлбөрийн жагсаалт</h1>
+              <p>Амжилттай, хүлээгдэж буй болон буцаагдсан төлбөрийг удирдах хэсэг.</p>
+            </div>
+            <button class="primary-btn" type="button">Санхүүгийн тайлан</button>
+          </div>
+
+          <div class="stats-grid">
+            <article class="stat-card">
+              <h3>Өнөөдрийн орлого</h3>
+              <div class="stat-value">4.8 сая₮</div>
+              <p>Карт болон QPay нийлбэр</p>
+            </article>
+            <article class="stat-card">
+              <h3>Хүлээгдэж буй</h3>
+              <div class="stat-value">11</div>
+              <p>Баталгаажуулалт хүлээж байна</p>
+            </article>
+            <article class="stat-card">
+              <h3>Буцаалт</h3>
+              <div class="stat-value">3</div>
+              <p>Энэ долоо хоногийн хүсэлт</p>
+            </article>
+          </div>
+
+          <section class="table-section">
+            <div class="section-head">
+              <h2>Гүйлгээний бүртгэл</h2>
+              <span class="section-meta">Сүүлийн 5 төлбөр</span>
+            </div>
+            <table class="admin-table">
+              <thead>
+                <tr>
+                  <th>Гүйлгээ</th>
+                  <th>Арга</th>
+                  <th>Дүн</th>
+                  <th>Огноо</th>
+                  <th>Төлөв</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>TXN-88102</td>
+                  <td>QPay</td>
+                  <td>129,000₮</td>
+                  <td>2026-04-18</td>
+                  <td><span class="badge success">Амжилттай</span></td>
+                </tr>
+                <tr>
+                  <td>TXN-88101</td>
+                  <td>Visa</td>
+                  <td>49,900₮</td>
+                  <td>2026-04-18</td>
+                  <td><span class="badge warning">Хүлээгдэж буй</span></td>
+                </tr>
+                <tr>
+                  <td>TXN-88100</td>
+                  <td>SocialPay</td>
+                  <td>244,000₮</td>
+                  <td>2026-04-17</td>
+                  <td><span class="badge danger">Буцаасан</span></td>
+                </tr>
+              </tbody>
+            </table>
+          </section>
+        </section>
+
+        <section class="tab-panel" id="news">
+          <div class="page-header">
+            <div>
+              <p class="eyebrow">Контент</p>
+              <h1>Мэдээ, зарлалын хэсэг</h1>
+              <p>Нүүр хуудасны banner, хямдрал, нийтлэлийн агуулгыг шинэчлэх хэсэг.</p>
+            </div>
+            <button class="primary-btn" type="button">Шинэ нийтлэл үүсгэх</button>
+          </div>
+
+          <div class="content-grid">
+            <section class="table-section">
+              <div class="section-head">
+                <h2>Нийтлэл, зарлал</h2>
+                <span class="section-meta">Нийт 9 контент</span>
+              </div>
+              <table class="admin-table">
+                <thead>
+                  <tr>
+                    <th>Гарчиг</th>
+                    <th>Төрөл</th>
+                    <th>Нийтэлсэн</th>
+                    <th>Төлөв</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Spring Sale 30%</td>
+                    <td>Banner</td>
+                    <td>2026-04-17</td>
+                    <td><span class="badge success">Нийтлэгдсэн</span></td>
+                  </tr>
+                  <tr>
+                    <td>Шинэ брэнд ирлээ</td>
+                    <td>Мэдээ</td>
+                    <td>2026-04-16</td>
+                    <td><span class="badge warning">Ноорог</span></td>
+                  </tr>
+                  <tr>
+                    <td>Хүргэлтийн хуваарь</td>
+                    <td>Зарлал</td>
+                    <td>2026-04-15</td>
+                    <td><span class="badge success">Идэвхтэй</span></td>
+                  </tr>
+                </tbody>
+              </table>
+            </section>
+
+            <aside class="side-card">
+              <h2>Контент календарь</h2>
+              <ul class="metric-list">
+                <li><strong>Дараагийн пост:</strong> 2026-04-20</li>
+                <li><strong>Идэвхтэй баннер:</strong> 3</li>
+                <li><strong>Ноорог материал:</strong> 2</li>
+                <li><strong>Хамгийн их хандалт:</strong> Spring Sale</li>
+              </ul>
+            </aside>
+          </div>
+        </section>
+      </main>
     </div>
   </div>
 
+  <script>
+    const tabLinks = document.querySelectorAll('.tab-link');
+    const tabPanels = document.querySelectorAll('.tab-panel');
+
+    tabLinks.forEach((button) => {
+      button.addEventListener('click', () => {
+        const targetId = button.dataset.tab;
+
+        tabLinks.forEach((item) => item.classList.remove('active'));
+        tabPanels.forEach((panel) => panel.classList.remove('active'));
+
+        button.classList.add('active');
+        document.getElementById(targetId).classList.add('active');
+      });
+    });
+  </script>
 </body>
 </html>
