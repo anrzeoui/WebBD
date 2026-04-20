@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="mn">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shoppy Admin - Мэдээ</title>
+  <link rel="stylesheet" href="style1.css">
+</head>
+<body>
+  <div class="admin-layout">
+    <aside class="sidebar">
+      <div class="sidebar-header">
+        <p class="sidebar-label">Удирдлагын хэсэг</p>
+        <h2>Shoppy Admin</h2>
+      </div>
+      <ul class="sidebar-menu">
+        <li><a class="tab-link" href="AdMasterPages.html">Барааны ангилал</a></li>
+        <li><a class="tab-link" href="Products.html">Барааны жагсаалт</a></li>
+        <li><a class="tab-link" href="Orders.html">Захиалгын жагсаалт</a></li>
+        <li><a class="tab-link" href="Customers.html">Хэрэглэгчдийн жагсаалт</a></li>
+        <li><a class="tab-link" href="Payments.html">Төлбөрийн жагсаалт</a></li>
+        <li><a class="tab-link active" href="News.html">Мэдээ, зарлал</a></li>
+      </ul>
+      <div class="sidebar-footer">
+        <a href="#">Гарах</a>
+      </div>
+    </aside>
+
+    <div class="main-wrapper">
+      <header class="topbar">
+        <div class="topbar-search">
+          <input type="text" placeholder="Гарчиг, төрөл, төлөв хайх...">
+          <button type="button">Хайх</button>
+        </div>
+        <div class="topbar-actions">
+          <button class="icon-btn" type="button">Мэдэгдэл</button>
+          <div class="admin-profile">
+            <div class="avatar">A</div>
+            <div>
+              <strong>Супер админ</strong>
+              <p>Контентын төлөвлөлт</p>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main class="content-area">
+        <section class="page-section">
+          <div class="page-header">
+            <div>
+              <p class="eyebrow">Контент</p>
+              <h1>Мэдээ, зарлалын хэсэг</h1>
+              <p>Нүүр хуудасны banner, хямдрал, нийтлэлийн агуулгыг шинэчлэх хэсэг.</p>
+            </div>
+            <button class="primary-btn" type="button">Шинэ нийтлэл үүсгэх</button>
+          </div>
+
+          <div class="content-grid">
+            <section class="table-section">
+              <div class="section-head">
+                <h2>Нийтлэл, зарлал</h2>
+                <span class="section-meta">Нийт 9 контент</span>
+              </div>
+              <table class="admin-table">
+                <thead>
+                  <tr>
+                    <th>Гарчиг</th>
+                    <th>Төрөл</th>
+                    <th>Нийтэлсэн</th>
+                    <th>Төлөв</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Spring Sale 30%</td>
+                    <td>Banner</td>
+                    <td>2026-04-17</td>
+                    <td><span class="badge success">Нийтлэгдсэн</span></td>
+                  </tr>
+                  <tr>
+                    <td>Шинэ брэнд ирлээ</td>
+                    <td>Мэдээ</td>
+                    <td>2026-04-16</td>
+                    <td><span class="badge warning">Ноорог</span></td>
+                  </tr>
+                  <tr>
+                    <td>Хүргэлтийн хуваарь</td>
+                    <td>Зарлал</td>
+                    <td>2026-04-15</td>
+                    <td><span class="badge success">Идэвхтэй</span></td>
+                  </tr>
+                </tbody>
+              </table>
+            </section>
+
+            <aside class="side-card">
+              <h2>Контент календарь</h2>
+              <ul class="metric-list">
+                <li><strong>Дараагийн пост:</strong> 2026-04-20</li>
+                <li><strong>Идэвхтэй баннер:</strong> 3</li>
+                <li><strong>Ноорог материал:</strong> 2</li>
+                <li><strong>Хамгийн их хандалт:</strong> Spring Sale</li>
+              </ul>
+            </aside>
+          </div>
+        </section>
+      </main>
+    </div>
+  </div>
+</body>
+</html>

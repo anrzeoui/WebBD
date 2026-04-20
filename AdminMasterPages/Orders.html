@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="mn">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shoppy Admin - Захиалга</title>
+  <link rel="stylesheet" href="style1.css">
+</head>
+<body>
+  <div class="admin-layout">
+    <aside class="sidebar">
+      <div class="sidebar-header">
+        <p class="sidebar-label">Удирдлагын хэсэг</p>
+        <h2>Shoppy Admin</h2>
+      </div>
+      <ul class="sidebar-menu">
+        <li><a class="tab-link" href="AdMasterPages.html">Барааны ангилал</a></li>
+        <li><a class="tab-link" href="Products.html">Барааны жагсаалт</a></li>
+        <li><a class="tab-link active" href="Orders.html">Захиалгын жагсаалт</a></li>
+        <li><a class="tab-link" href="Customers.html">Хэрэглэгчдийн жагсаалт</a></li>
+        <li><a class="tab-link" href="Payments.html">Төлбөрийн жагсаалт</a></li>
+        <li><a class="tab-link" href="News.html">Мэдээ, зарлал</a></li>
+      </ul>
+      <div class="sidebar-footer">
+        <a href="#">Гарах</a>
+      </div>
+    </aside>
+
+    <div class="main-wrapper">
+      <header class="topbar">
+        <div class="topbar-search">
+          <input type="text" placeholder="Захиалга, хэрэглэгч, байршил хайх...">
+          <button type="button">Хайх</button>
+        </div>
+        <div class="topbar-actions">
+          <button class="icon-btn" type="button">Мэдэгдэл</button>
+          <div class="admin-profile">
+            <div class="avatar">A</div>
+            <div>
+              <strong>Супер админ</strong>
+              <p>Захиалгын realtime хяналт</p>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main class="content-area">
+        <section class="page-section">
+          <div class="page-header">
+            <div>
+              <p class="eyebrow">Захиалга</p>
+              <h1>Захиалгын жагсаалт</h1>
+              <p>Шинэ, хүргэлтэнд гарсан болон дууссан захиалгыг хянах хэсэг.</p>
+            </div>
+            <button class="primary-btn" type="button">Тайлан татах</button>
+          </div>
+
+          <div class="stats-grid">
+            <article class="stat-card">
+              <h3>Өнөөдрийн захиалга</h3>
+              <div class="stat-value">86</div>
+              <p>Өчигдрөөс 14%-иар өссөн</p>
+            </article>
+            <article class="stat-card">
+              <h3>Хүргэлтэнд</h3>
+              <div class="stat-value">29</div>
+              <p>Замд яваа илгээмжүүд</p>
+            </article>
+            <article class="stat-card">
+              <h3>Цуцлагдсан</h3>
+              <div class="stat-value">4</div>
+              <p>Шийдвэр хүлээж буй 1 кейс байна</p>
+            </article>
+          </div>
+
+          <section class="table-section">
+            <div class="section-head">
+              <h2>Шинэ захиалгууд</h2>
+              <span class="section-meta">Өнөөдрийн realtime төлөв</span>
+            </div>
+            <table class="admin-table">
+              <thead>
+                <tr>
+                  <th>Захиалга #</th>
+                  <th>Хэрэглэгч</th>
+                  <th>Дүн</th>
+                  <th>Хүргэлт</th>
+                  <th>Төлөв</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>#SO-24018</td>
+                  <td>Э. Анужин</td>
+                  <td>179,000₮</td>
+                  <td>УБ, ХУД</td>
+                  <td><span class="badge warning">Бэлтгэж байна</span></td>
+                </tr>
+                <tr>
+                  <td>#SO-24017</td>
+                  <td>Б. Тэмүүлэн</td>
+                  <td>82,500₮</td>
+                  <td>Дархан</td>
+                  <td><span class="badge success">Хүргэлтэнд</span></td>
+                </tr>
+                <tr>
+                  <td>#SO-24016</td>
+                  <td>С. Намуун</td>
+                  <td>244,000₮</td>
+                  <td>Эрдэнэт</td>
+                  <td><span class="badge success">Хүлээлгэн өгсөн</span></td>
+                </tr>
+              </tbody>
+            </table>
+          </section>
+        </section>
+      </main>
+    </div>
+  </div>
+</body>
+</html>

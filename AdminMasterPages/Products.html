@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="mn">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shoppy Admin - Барааны жагсаалт</title>
+  <link rel="stylesheet" href="style1.css">
+</head>
+<body>
+  <div class="admin-layout">
+    <aside class="sidebar">
+      <div class="sidebar-header">
+        <p class="sidebar-label">Удирдлагын хэсэг</p>
+        <h2>Shoppy Admin</h2>
+      </div>
+      <ul class="sidebar-menu">
+        <li><a class="tab-link" href="AdMasterPages.html">Барааны ангилал</a></li>
+        <li><a class="tab-link active" href="Products.html">Барааны жагсаалт</a></li>
+        <li><a class="tab-link" href="Orders.html">Захиалгын жагсаалт</a></li>
+        <li><a class="tab-link" href="Customers.html">Хэрэглэгчдийн жагсаалт</a></li>
+        <li><a class="tab-link" href="Payments.html">Төлбөрийн жагсаалт</a></li>
+        <li><a class="tab-link" href="News.html">Мэдээ, зарлал</a></li>
+      </ul>
+      <div class="sidebar-footer">
+        <a href="#">Гарах</a>
+      </div>
+    </aside>
+
+    <div class="main-wrapper">
+      <header class="topbar">
+        <div class="topbar-search">
+          <input type="text" placeholder="Бараа, SKU, нийлүүлэгч хайх...">
+          <button type="button">Хайх</button>
+        </div>
+        <div class="topbar-actions">
+          <button class="icon-btn" type="button">Мэдэгдэл</button>
+          <div class="admin-profile">
+            <div class="avatar">A</div>
+            <div>
+              <strong>Супер админ</strong>
+              <p>Барааны сангийн хяналт</p>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main class="content-area">
+        <section class="page-section">
+          <div class="page-header">
+            <div>
+              <p class="eyebrow">Барааны сан</p>
+              <h1>Барааны жагсаалт</h1>
+              <p>Үлдэгдэл, үнэ, нийлүүлэгч болон онцлох статусыг хянах хэсэг.</p>
+            </div>
+            <button class="primary-btn" type="button">Шинэ бараа бүртгэх</button>
+          </div>
+
+          <div class="stats-grid">
+            <article class="stat-card">
+              <h3>Нийт бараа</h3>
+              <div class="stat-value">1,248</div>
+              <p>Сүүлийн 24 цагт 19 бараа нэмэгдсэн</p>
+            </article>
+            <article class="stat-card">
+              <h3>Дуусах дөхсөн</h3>
+              <div class="stat-value">34</div>
+              <p>10-аас доош үлдэгдэлтэй</p>
+            </article>
+            <article class="stat-card">
+              <h3>Онцлох бараа</h3>
+              <div class="stat-value">12</div>
+              <p>Маркетингийн нүүрэнд байршуулсан</p>
+            </article>
+          </div>
+
+          <section class="table-section">
+            <div class="section-head">
+              <h2>Сүүлд шинэчлэгдсэн бараанууд</h2>
+              <span class="section-meta">6 мөр харуулж байна</span>
+            </div>
+            <table class="admin-table">
+              <thead>
+                <tr>
+                  <th>Бараа</th>
+                  <th>Ангилал</th>
+                  <th>Үнэ</th>
+                  <th>Үлдэгдэл</th>
+                  <th>Төлөв</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>iPhone 15 Case</td>
+                  <td>Электроник</td>
+                  <td>49,900₮</td>
+                  <td>84</td>
+                  <td><span class="badge success">Зарагдаж байна</span></td>
+                </tr>
+                <tr>
+                  <td>Vitamin C Serum</td>
+                  <td>Гоо сайхан</td>
+                  <td>39,000₮</td>
+                  <td>9</td>
+                  <td><span class="badge warning">Дуусах дөхсөн</span></td>
+                </tr>
+                <tr>
+                  <td>Bluetooth Speaker</td>
+                  <td>Электроник</td>
+                  <td>129,000₮</td>
+                  <td>0</td>
+                  <td><span class="badge danger">Дууссан</span></td>
+                </tr>
+              </tbody>
+            </table>
+          </section>
+        </section>
+      </main>
+    </div>
+  </div>
+</body>
+</html>

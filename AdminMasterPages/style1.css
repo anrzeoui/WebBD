@@ -4,6 +4,7 @@
   padding: 0;
 }
 
+/* Shared admin panel color system */
 :root {
   --bg: #f4f6f9;
   --surface: #ffffff;
@@ -29,6 +30,7 @@ body {
   color: var(--text);
 }
 
+/* Global defaults */
 a {
   text-decoration: none;
   color: inherit;
@@ -45,6 +47,7 @@ select {
   min-height: 100vh;
 }
 
+/* Sidebar navigation area */
 .sidebar {
   width: 280px;
   background: linear-gradient(180deg, var(--sidebar-deep), var(--sidebar));
@@ -83,6 +86,7 @@ select {
 }
 
 .tab-link {
+  display: block;
   width: 100%;
   border: none;
   background: transparent;
@@ -120,6 +124,7 @@ select {
   min-width: 0;
 }
 
+/* Topbar for search and profile */
 .topbar {
   background: var(--surface);
   min-height: 76px;
@@ -212,11 +217,8 @@ select {
   padding: 28px;
 }
 
-.tab-panel {
-  display: none;
-}
-
-.tab-panel.active {
+/* Main page block inside each separate admin file */
+.page-section {
   display: block;
 }
 
@@ -273,6 +275,7 @@ select {
   grid-template-columns: minmax(0, 2fr) minmax(280px, 1fr);
 }
 
+/* Reusable cards and tables across admin sections */
 .stat-card,
 .table-section,
 .side-card {
@@ -394,6 +397,7 @@ select {
   margin-top: 14px;
 }
 
+/* Responsive admin layout rules */
 @media (max-width: 1100px) {
   .content-grid {
     grid-template-columns: 1fr;

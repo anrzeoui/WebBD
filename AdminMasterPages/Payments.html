@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="mn">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shoppy Admin - Төлбөр</title>
+  <link rel="stylesheet" href="style1.css">
+</head>
+<body>
+  <div class="admin-layout">
+    <aside class="sidebar">
+      <div class="sidebar-header">
+        <p class="sidebar-label">Удирдлагын хэсэг</p>
+        <h2>Shoppy Admin</h2>
+      </div>
+      <ul class="sidebar-menu">
+        <li><a class="tab-link" href="AdMasterPages.html">Барааны ангилал</a></li>
+        <li><a class="tab-link" href="Products.html">Барааны жагсаалт</a></li>
+        <li><a class="tab-link" href="Orders.html">Захиалгын жагсаалт</a></li>
+        <li><a class="tab-link" href="Customers.html">Хэрэглэгчдийн жагсаалт</a></li>
+        <li><a class="tab-link active" href="Payments.html">Төлбөрийн жагсаалт</a></li>
+        <li><a class="tab-link" href="News.html">Мэдээ, зарлал</a></li>
+      </ul>
+      <div class="sidebar-footer">
+        <a href="#">Гарах</a>
+      </div>
+    </aside>
+
+    <div class="main-wrapper">
+      <header class="topbar">
+        <div class="topbar-search">
+          <input type="text" placeholder="Гүйлгээ, төлбөрийн арга хайх...">
+          <button type="button">Хайх</button>
+        </div>
+        <div class="topbar-actions">
+          <button class="icon-btn" type="button">Мэдэгдэл</button>
+          <div class="admin-profile">
+            <div class="avatar">A</div>
+            <div>
+              <strong>Супер админ</strong>
+              <p>Санхүүгийн хяналтын самбар</p>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main class="content-area">
+        <section class="page-section">
+          <div class="page-header">
+            <div>
+              <p class="eyebrow">Санхүү</p>
+              <h1>Төлбөрийн жагсаалт</h1>
+              <p>Амжилттай, хүлээгдэж буй болон буцаагдсан төлбөрийг удирдах хэсэг.</p>
+            </div>
+            <button class="primary-btn" type="button">Санхүүгийн тайлан</button>
+          </div>
+
+          <div class="stats-grid">
+            <article class="stat-card">
+              <h3>Өнөөдрийн орлого</h3>
+              <div class="stat-value">4.8 сая₮</div>
+              <p>Карт болон QPay нийлбэр</p>
+            </article>
+            <article class="stat-card">
+              <h3>Хүлээгдэж буй</h3>
+              <div class="stat-value">11</div>
+              <p>Баталгаажуулалт хүлээж байна</p>
+            </article>
+            <article class="stat-card">
+              <h3>Буцаалт</h3>
+              <div class="stat-value">3</div>
+              <p>Энэ долоо хоногийн хүсэлт</p>
+            </article>
+          </div>
+
+          <section class="table-section">
+            <div class="section-head">
+              <h2>Гүйлгээний бүртгэл</h2>
+              <span class="section-meta">Сүүлийн 5 төлбөр</span>
+            </div>
+            <table class="admin-table">
+              <thead>
+                <tr>
+                  <th>Гүйлгээ</th>
+                  <th>Арга</th>
+                  <th>Дүн</th>
+                  <th>Огноо</th>
+                  <th>Төлөв</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>TXN-88102</td>
+                  <td>QPay</td>
+                  <td>129,000₮</td>
+                  <td>2026-04-18</td>
+                  <td><span class="badge success">Амжилттай</span></td>
+                </tr>
+                <tr>
+                  <td>TXN-88101</td>
+                  <td>Visa</td>
+                  <td>49,900₮</td>
+                  <td>2026-04-18</td>
+                  <td><span class="badge warning">Хүлээгдэж буй</span></td>
+                </tr>
+                <tr>
+                  <td>TXN-88100</td>
+                  <td>SocialPay</td>
+                  <td>244,000₮</td>
+                  <td>2026-04-17</td>
+                  <td><span class="badge danger">Буцаасан</span></td>
+                </tr>
+              </tbody>
+            </table>
+          </section>
+        </section>
+      </main>
+    </div>
+  </div>
+</body>
+</html>
