@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="mn">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Баталгаажуулах</title>
+  <link rel="stylesheet" href="confirm.css" />
+</head>
+<body>
+  <header class="checkout-header">
+    <div class="checkout-logo-wrap">
+      <a href="MasterPage.html" class="checkout-logo">shoppy</a>
+      <span class="checkout-tag">баяр нэмнэ</span>
+    </div>
+    <div class="checkout-top-actions">
+      <div class="checkout-summary-pill">
+        <strong id="headerTotal">0 ₮</strong>
+        <span>таны сагсанд</span>
+      </div>
+      <div class="checkout-user-pill">
+        <strong>Хэрэглэгч</strong>
+        <span id="headerEmail">user@example.com</span>
+      </div>
+    </div>
+  </header>
+
+  <main class="confirm-page">
+    <div class="checkout-steps">
+      <a class="step" href="basket.html">Миний сагс</a>
+      <a class="step" href="address.html">Захиалгын хаяг</a>
+      <a class="step active" href="confirm.html">Баталгаажуулах</a>
+      <span class="step">Захиалгын мэдээлэл</span>
+    </div>
+
+    <section class="confirm-layout">
+      <div class="confirm-column">
+        <section class="panel">
+          <h1>Баталгаажуулах</h1>
+          <p class="panel-subtitle">Захиалгын мэдээллээ нэг шалгаад үргэлжлүүлээрэй.</p>
+          <div class="delivery-row">
+            <div class="delivery-icon">📦</div>
+            <div>
+              <h2>Энгийн хүргэлт</h2>
+              <p>24-48 цагийн хооронд хүргэгдэнэ.</p>
+            </div>
+            <strong id="productCount">Бүтээгдэхүүн (0)</strong>
+          </div>
+          <div id="orderItems" class="order-items"></div>
+        </section>
+
+        <section class="panel compact">
+          <h2 class="section-title">Захиалагчийн мэдээлэл</h2>
+          <div class="info-list">
+            <div class="info-row"><span class="info-label">Нэр</span><strong id="customerName">-</strong></div>
+            <div class="info-row"><span class="info-label">Холбоо барих</span><strong id="customerContact">-</strong></div>
+          </div>
+        </section>
+
+        <section class="panel compact">
+          <h2 class="section-title">Хүргэлтийн хаяг</h2>
+          <div class="info-list">
+            <div class="info-row with-icon"><span class="info-icon">📍</span><strong id="deliveryAddressText">-</strong></div>
+            <div class="info-row with-icon"><span class="info-icon">👤</span><strong id="receiverText">-</strong></div>
+          </div>
+        </section>
+
+        <section class="wallet-section">
+          <h2 class="wallet-section-title">Хэтэвч ашиглах</h2>
+          <div class="wallet-card">
+            <div class="wallet-brand">shoppy</div>
+            <div class="wallet-content">
+              <div class="wallet-title">Үлдэгдэл</div>
+              <div class="wallet-balance">0 ₮</div>
+            </div>
+            <button type="button" class="wallet-btn">⊕ Хэтэвч ашиглах</button>
+          </div>
+        </section>
+
+        <section class="wallet-section">
+          <h2 class="wallet-section-title">Хэтэвч цэнэглэх</h2>
+          <button type="button" class="topup-card">
+            <span>Бэлгийн картаар хэтэвчээ цэнэглэх</span>
+            <span class="topup-arrow">›</span>
+          </button>
+        </section>
+      </div>
+
+      <aside class="summary-column">
+        <section class="summary-box">
+          <h2>Төлбөрийн мэдээлэл</h2>
+          <div id="summaryItems" class="summary-items"></div>
+          <div class="summary-divider"></div>
+          <div class="summary-row"><span>Хүргэлтийн үнэ</span><strong id="deliveryFee">7,980 ₮</strong></div>
+          <div class="summary-row"><span>Бүтээгдэхүүний үнэ</span><strong id="productTotal">0 ₮</strong></div>
+          <div class="summary-row total"><span>Нийт төлөх дүн</span><strong id="grandTotal">0 ₮</strong></div>
+          <button id="continueBtn" class="primary-btn" type="button">Үргэлжлүүлэх</button>
+          <a class="secondary-btn" href="address.html">Өмнөх алхам руу буцах</a>
+        </section>
+      </aside>
+    </section>
+  </main>
+
+  <script src="confirm.js"></script>
+</body>
+</html>

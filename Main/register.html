@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="mn">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Бүртгүүлэх</title>
+  <link rel="stylesheet" href="register.css" />
+</head>
+<body>
+  <header class="auth-topbar">
+    <a href="login.html" class="back-button">←</a>
+    <a href="MasterPage.html" class="auth-brand">
+      <span class="brand-main">shoppy</span>
+      <span class="brand-tag">баяр<br />нэмнэ</span>
+    </a>
+  </header>
+
+  <main class="register-layout">
+    <section class="register-panel">
+      <h1>Бүртгүүлэх</h1>
+      <label class="register-label" for="registerEmail">И-мэйл хаяг, гар утас</label>
+
+      <form id="registerForm" class="register-form">
+        <input type="text" id="registerName" placeholder="Нэр" required />
+        <input type="email" id="registerEmail" placeholder="И-мэйл хаяг эсвэл гар утасны дугаар" required />
+        <input type="password" id="registerPassword" placeholder="Нууц үг" required />
+
+        <div class="switch-line">
+          <span>Та бүртгэлтэй бол</span>
+          <a href="login.html">Нэвтрэх</a>
+        </div>
+
+        <div class="button-row">
+          <a href="login.html" class="ghost-btn">Буцах</a>
+          <button type="submit" class="submit-btn">Бүртгүүлэх →</button>
+        </div>
+      </form>
+
+      <div class="register-note" id="registerMessage"></div>
+      <div class="cody-mark">cody</div>
+      <p class="copyright">All rights reserved. Copyright © 2026 CODY LLC.</p>
+    </section>
+  </main>
+
+  <script src="register.js"></script>
+</body>
+</html>

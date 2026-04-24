@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="mn">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Сагс</title>
+  <link rel="stylesheet" href="basket.css" />
+</head>
+<body>
+  <header class="checkout-header">
+    <div class="checkout-logo-wrap">
+      <a href="MasterPage.html" class="checkout-logo">shoppy</a>
+      <span class="checkout-tag">баяр нэмнэ</span>
+    </div>
+    <div class="checkout-top-actions">
+      <div class="checkout-summary-pill">
+        <strong id="headerTotal">0 ₮</strong>
+        <span>таны сагсанд</span>
+      </div>
+      <div class="checkout-user-pill">
+        <strong>Хэрэглэгч</strong>
+        <span>user@example.com</span>
+      </div>
+    </div>
+  </header>
+
+  <main class="checkout-page">
+    <div class="checkout-steps">
+      <a class="step active" href="basket.html">Миний сагс</a>
+      <a class="step" href="address.html">Захиалгын хаяг</a>
+      <a class="step" href="confirm.html">Баталгаажуулах</a>
+      <span class="step">Захиалгын мэдээлэл</span>
+    </div>
+
+    <section class="checkout-content">
+      <div class="cart-column">
+        <div class="cart-title-row">
+          <h1>Таны сагс</h1>
+          <button class="clear-cart-btn" id="clearCartBtn" type="button">Сагс хоослох</button>
+        </div>
+
+        <div class="delivery-card">
+          <div class="delivery-icon">📦</div>
+          <div>
+            <h2>Энгийн хүргэлт</h2>
+            <p>24-48 цагийн хооронд хүргэгдэнэ.</p>
+          </div>
+          <strong id="productCount">Бүтээгдэхүүн (0)</strong>
+        </div>
+
+        <div id="cartItems" class="cart-items"></div>
+      </div>
+
+      <aside class="payment-column">
+        <h2>Төлбөрийн мэдээлэл</h2>
+        <div class="donate-box">
+          <span>shoppy donate</span>
+          <span>Хандив нэмэх</span>
+        </div>
+        <div class="payment-box">
+          <h3>Нийт</h3>
+          <div class="summary-row"><span>Бүтээгдэхүүний үнэ</span><strong id="subtotal">0 ₮</strong></div>
+          <div class="summary-row total"><span>Нийт төлөх дүн</span><strong id="grandTotal">0 ₮</strong></div>
+          <div class="coupon-row">
+            <input type="text" placeholder="Хөнгөлөлтийн кодоо оруулна уу" />
+            <button type="button">Оруулах</button>
+          </div>
+        </div>
+        <button class="continue-btn" id="continueBtn" type="button">Үргэлжлүүлэх</button>
+      </aside>
+    </section>
+  </main>
+
+  <script src="basket.js"></script>
+</body>
+</html>

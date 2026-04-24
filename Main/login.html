@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="mn">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Нэвтрэх</title>
+  <link rel="stylesheet" href="login.css" />
+</head>
+<body>
+  <header class="auth-topbar">
+    <a href="MasterPage.html" class="back-button">←</a>
+    <a href="MasterPage.html" class="auth-brand">
+      <span class="brand-main">shoppy</span>
+      <span class="brand-tag">баяр<br />нэмнэ</span>
+    </a>
+  </header>
+
+  <main class="auth-layout">
+    <section class="auth-panel">
+      <h1>Нэвтрэх</h1>
+      <label class="auth-label" for="loginEmail">Нэвтрэх</label>
+
+      <form id="loginForm" class="auth-form">
+        <input type="email" id="loginEmail" placeholder="И-мэйл хаяг эсвэл гар утасны дугаар" required />
+        <button type="submit" class="primary-btn">Үргэлжлүүлэх →</button>
+      </form>
+
+      <div class="switch-line">
+        <span>Шинэ хэрэглэгч болох</span>
+        <a href="register.html">Бүртгүүлэх</a>
+      </div>
+
+      <div class="separator">эсвэл</div>
+
+      <button type="button" class="facebook-uiverse-btn">
+        <svg
+          class="facebook-icon"
+          stroke="currentColor"
+          fill="currentColor"
+          stroke-width="0"
+          viewBox="0 0 448 512"
+          xmlns="http://www.w3.org/2000/svg"
+          aria-hidden="true"
+        >
+          <path
+            d="M400 32H48A48 48 0 0 0 0 80v352a48 48 0 0 0 48 48h137.25V327.69h-63V256h63v-54.64c0-62.15 37-96.48 93.67-96.48 27.14 0 55.52 4.84 55.52 4.84v61h-31.27c-30.81 0-40.42 19.12-40.42 38.73V256h68.78l-11 71.69h-57.78V480H400a48 48 0 0 0 48-48V80a48 48 0 0 0-48-48z"
+          ></path>
+        </svg>
+        <span>Facebook-ээр нэвтрэх</span>
+      </button>
+      <button type="button" class="google-uiverse-btn">
+        <svg xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid" viewBox="0 0 256 262" aria-hidden="true">
+          <path fill="#4285F4" d="M255.878 133.451c0-10.734-.871-18.567-2.756-26.69H130.55v48.448h71.947c-1.45 12.04-9.283 30.172-26.69 42.356l-.244 1.622 38.755 30.023 2.685.268c24.659-22.774 38.875-56.282 38.875-96.027"></path>
+          <path fill="#34A853" d="M130.55 261.1c35.248 0 64.839-11.605 86.453-31.622l-41.196-31.913c-11.024 7.688-25.82 13.055-45.257 13.055-34.523 0-63.824-22.773-74.269-54.25l-1.531.13-40.298 31.187-.527 1.465C35.393 231.798 79.49 261.1 130.55 261.1"></path>
+          <path fill="#FBBC05" d="M56.281 156.37c-2.756-8.123-4.351-16.827-4.351-25.82 0-8.994 1.595-17.697 4.206-25.82l-.073-1.73L15.26 71.312l-1.335.635C5.077 89.644 0 109.517 0 130.55s5.077 40.905 13.925 58.602l42.356-32.782"></path>
+          <path fill="#EB4335" d="M130.55 50.479c24.514 0 41.05 10.589 50.479 19.438l36.844-35.974C195.245 12.91 165.798 0 130.55 0 79.49 0 35.393 29.301 13.925 71.947l42.211 32.783c10.59-31.477 39.891-54.251 74.414-54.251"></path>
+        </svg>
+        <span>Google-ээр нэвтрэх</span>
+      </button>
+
+      <div class="auth-note" id="loginMessage"></div>
+    </section>
+  </main>
+
+  <script src="login.js"></script>
+</body>
+</html>

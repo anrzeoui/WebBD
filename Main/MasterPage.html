@@ -4,10 +4,9 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Shoppy Clone</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-
   <div class="top-banner">
     <div class="top-banner-inner">
       <div>SUPER CONCERT</div>
@@ -20,10 +19,10 @@
     <div class="container utility-inner">
       <div>Шоппид тавтай морил</div>
       <div class="utility-right">
-        <a href="Collab">Хамтран ажиллах</a>
-        <a href="DownloadApp">Апп татах</a>
-        <a href="HelpCenter">Тусламж</a>
-        <a href="Comments">Сэтгэгдэл үлдээх</a>
+        <a href="#">Хамтран ажиллах</a>
+        <a href="#">Апп татах</a>
+        <a href="#">Тусламж</a>
+        <a href="#">Сэтгэгдэл үлдээх</a>
       </div>
     </div>
   </div>
@@ -33,41 +32,96 @@
       <div class="logo">shoppy</div>
 
       <div class="search-area">
-        <select class="search-category">
+        <select class="search-category" id="searchCategory">
           <option>Бүгд</option>
-          <option>Электрон бараа</option>
+          <option>Эмэгтэй</option>
+          <option>Эрэгтэй</option>
+          <option>Гэрийн бараа</option>
           <option>Гоо сайхан</option>
+          <option>Технологи</option>
         </select>
-        <input class="search-input" type="text" placeholder="Бараа, брэнд хайх...">
-        <button class="search-btn">🔍</button>
+        <input class="search-input" id="searchInput" type="text" placeholder="Бараа, брэнд хайх..." />
+        <button class="search-btn" id="searchBtn" type="button">🔍</button>
       </div>
 
       <div class="header-actions">
-        <a href="LastSeen" class="action-item">Сүүлд үзсэн</a>
-        <a href="Wallet" class="action-item">Хэтэвч</a>
-        <a href="Cart" class="action-item">Сагс</a>
-        <a href="Login" class="action-item">Нэвтрэх</a>
+        <a href="#" class="action-item">Сүүлд үзсэн</a>
+        <a href="#" class="action-item">Хэтэвч</a>
+        <a href="basket.html" class="action-item">Сагс</a>
+        <button class="action-item action-button" id="userDrawerToggle" type="button">Хэрэглэгч</button>
       </div>
     </div>
   </header>
 
   <nav class="menu-bar">
     <div class="container menu-inner">
-      <button class="category-btn">☰ БҮХ АНГИЛАЛ</button>
+      <button class="category-btn" type="button">☰ БҮХ АНГИЛАЛ</button>
       <div class="menu-links">
-        <a href="NewProducts">Шинэ</a>
-        <a href="SaleProducts">Хямдрал</a>
-        <a href="Brands">Брэндүүд</a>
-        <a href="Tickets">Тасалбар</a>
+        <a href="#">Нүүр</a>
+        <a href="#">Шинэ</a>
+        <a href="#">Хямдрал</a>
+        <a href="#">Брэндүүд</a>
+        <a href="#">Тасалбар</a>
       </div>
     </div>
   </nav>
 
   <main class="container content-area">
-    <div class="empty-body">
-
+    <div class="empty-body" id="searchState">
+      <h1>Shoppy main page</h1>
+      <p>Дээрх хайлтаар бараа, брэнд, ангиллаа шүүж туршиж болно.</p>
     </div>
+
+    <section class="results-wrap hidden" id="resultsWrap">
+      <div class="results-head">
+        <h2>Хайлтын илэрц</h2>
+        <span id="resultsCount">0 бараа</span>
+      </div>
+      <div class="results-grid" id="searchResults"></div>
+    </section>
   </main>
+
+  <div class="user-drawer-overlay hidden" id="userDrawerOverlay"></div>
+  <aside class="user-drawer" id="userDrawer" aria-hidden="true">
+    <button class="drawer-close" id="userDrawerClose" type="button" aria-label="Хаах">×</button>
+    <div class="drawer-profile">
+      <div class="drawer-avatar">Х</div>
+      <h2 id="drawerUserName">Хэрэглэгч</h2>
+      <p id="drawerUserEmail">user@example.com</p>
+    </div>
+
+    <div class="drawer-wallet-card">
+      <div class="drawer-wallet-brand">shoppy хэтэвч</div>
+      <div class="drawer-wallet-label">Үлдэгдэл</div>
+      <div class="drawer-wallet-balance">0 ₮</div>
+    </div>
+
+    <a class="drawer-link-card" href="#">
+      <span>Бэлгийн картаар хэтэвч цэнэглэх</span>
+      <span>›</span>
+    </a>
+
+    <a class="drawer-primary-link" href="login.html">Нэвтрэх / мэдээллээ засах</a>
+
+    <div class="drawer-grid">
+      <a class="drawer-grid-item" href="basket.html">
+        <span class="drawer-grid-icon">🛒</span>
+        <span>Миний сагс</span>
+      </a>
+      <a class="drawer-grid-item" href="address.html">
+        <span class="drawer-grid-icon">📍</span>
+        <span>Захиалгын хаяг</span>
+      </a>
+      <a class="drawer-grid-item" href="confirm.html">
+        <span class="drawer-grid-icon">📦</span>
+        <span>Баталгаажуулах</span>
+      </a>
+      <a class="drawer-grid-item" href="login.html">
+        <span class="drawer-grid-icon">👤</span>
+        <span>Бүртгэл</span>
+      </a>
+    </div>
+  </aside>
 
   <footer class="shoppy-footer">
     <div class="container footer-main">
@@ -78,9 +132,9 @@
 
       <div class="footer-col">
         <h3>Тусламж</h3>
-        <a href="FAQ">Түгээмэл асуултууд (FAQ)</a>
-        <a href="Terms">Үйлчилгээний нөхцөл</a>
-        <a href="Privacy">Нууцлалын бодлого </a>
+        <a href="#">Түгээмэл асуултууд (FAQ)</a>
+        <a href="#">Үйлчилгээний нөхцөл</a>
+        <a href="#">Нууцлалын бодлого</a>
       </div>
 
       <div class="footer-col">
@@ -89,8 +143,8 @@
         <p>Утас: 7777-XXXX</p>
       </div>
     </div>
-
   </footer>
 
+  <script src="MasterPage.js"></script>
 </body>
 </html>

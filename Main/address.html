@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="mn">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Захиалгын хаяг</title>
+  <link rel="stylesheet" href="address.css" />
+</head>
+<body>
+  <header class="checkout-header">
+    <div class="checkout-logo-wrap">
+      <a href="MasterPage.html" class="checkout-logo">shoppy</a>
+      <span class="checkout-tag">баяр нэмнэ</span>
+    </div>
+    <div class="checkout-top-actions">
+      <div class="checkout-summary-pill">
+        <strong id="headerTotal">0 ₮</strong>
+        <span>таны сагсанд</span>
+      </div>
+      <div class="checkout-user-pill">
+        <strong>Хэрэглэгч</strong>
+        <span>user@example.com</span>
+      </div>
+    </div>
+  </header>
+
+  <main class="address-page">
+    <div class="checkout-steps">
+      <a class="step" href="basket.html">Миний сагс</a>
+      <a class="step active" href="address.html">Захиалгын хаяг</a>
+      <a class="step" href="confirm.html">Баталгаажуулах</a>
+      <span class="step">Захиалгын мэдээлэл</span>
+    </div>
+
+    <section class="address-layout">
+      <div class="address-column">
+        <section class="panel">
+          <h1>Хүргэлтийн хаяг</h1>
+          <p class="panel-subtitle">Хаягийн мэдээллээ бөглөөд хүргэлтийн байршлаа хадгална уу.</p>
+          <form id="addressForm" class="form-grid">
+            <label><span>Хаягийн нэр</span><input type="text" name="addressName" placeholder="Ажил, гэр" required /></label>
+            <label><span>Хот</span><input type="text" name="city" placeholder="Улаанбаатар" required /></label>
+            <label><span>Дүүрэг</span><input type="text" name="district" placeholder="Баянзүрх дүүрэг" required /></label>
+            <label><span>Хороо</span><input type="text" name="khoroo" placeholder="2-р хороо" required /></label>
+            <label class="full-width"><span>Дэлгэрэнгүй хаяг</span><textarea name="details" rows="4" placeholder="Байр, орц, давхар, тоот..." required></textarea></label>
+            <label class="checkbox-row full-width"><input type="checkbox" name="otherReceiver" /><span>Өөр хүн хүлээн авна</span></label>
+          </form>
+        </section>
+
+        <section class="panel">
+          <h2>Захиалагчийн мэдээлэл</h2>
+          <div class="form-grid">
+            <label><span>Нэр</span><input type="text" id="firstName" placeholder="Нэр" /></label>
+            <label><span>Овог</span><input type="text" id="lastName" placeholder="Овог" /></label>
+            <label><span>Утасны дугаар</span><input type="tel" id="phone" placeholder="99112233" /></label>
+            <label><span>И-мэйл хаяг</span><input type="email" id="email" placeholder="user@example.com" /></label>
+          </div>
+        </section>
+      </div>
+
+      <aside class="summary-column">
+        <section class="summary-box">
+          <h2>Төлбөрийн мэдээлэл</h2>
+          <div id="productSummary" class="product-summary"></div>
+          <div class="summary-divider"></div>
+          <div class="summary-row"><span>Хүргэлтийн үнэ</span><strong id="deliveryFee">7,980 ₮</strong></div>
+          <div class="summary-row"><span>Бүтээгдэхүүний үнэ</span><strong id="productTotal">0 ₮</strong></div>
+          <div class="summary-row total"><span>Нийт төлөх дүн</span><strong id="grandTotal">0 ₮</strong></div>
+          <button id="continueBtn" class="primary-btn" type="button">Үргэлжлүүлэх</button>
+          <a class="secondary-btn" href="basket.html">Өмнөх алхам руу буцах</a>
+        </section>
+      </aside>
+    </section>
+  </main>
+
+  <script src="address.js"></script>
+</body>
+</html>
