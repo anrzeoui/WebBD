@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="mn">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Shoppy Clone</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="top-banner">
+    <div class="top-banner-inner">
+      <div>SUPER CONCERT</div>
+      <div>NOW AVAILABLE PHASE 2</div>
+      <div>2ND HEADLINER COMING SOON</div>
+    </div>
+  </div>
+
+  <div class="utility-bar">
+    <div class="container utility-inner">
+      <div>Shoppy-д тавтай морил</div>
+      <div class="utility-right">
+        <a href="Collab">Хамтран ажиллах</a>
+        <a href="DownloadApp">Апп татах</a>
+        <a href="HelpCenter">Тусламж</a>
+        <a href="Comments">Сэтгэгдэл үлдээх</a>
+      </div>
+    </div>
+  </div>
+
+  <header class="main-header">
+    <div class="container header-inner">
+      <div class="logo">shoppy</div>
+
+      <div class="search-area">
+        <select class="search-category" aria-label="Ангилал сонгох">
+          <option>Бүгд</option>
+          <option>Электрон бараа</option>
+          <option>Гоо сайхан</option>
+        </select>
+        <input class="search-input" type="text" placeholder="Бараа, брэнд хайх..." />
+        <button class="search-btn" type="button" aria-label="Хайх">Хайх</button>
+      </div>
+
+      <div class="header-actions">
+        <a href="LastSeen" class="action-item">Сүүлд үзсэн</a>
+        <a href="Wallet" class="action-item">Хэтэвч</a>
+        <a href="Cart" class="action-item">Сагс</a>
+        <a href="Login" class="action-item">Нэвтрэх</a>
+      </div>
+    </div>
+  </header>
+
+  <nav class="menu-bar">
+    <div class="container menu-inner">
+      <div class="category-menu">
+        <button
+          class="category-btn"
+          type="button"
+          id="categoryToggle"
+          aria-expanded="false"
+          aria-controls="categoryPanel"
+        >
+          ☰ БҮХ АНГИЛАЛ
+        </button>
+
+        <div class="category-dropdown" id="categoryPanel">
+          <div class="category-left">
+            <button class="cat-item active" type="button" data-cat="men">Эрэгтэй</button>
+            <button class="cat-item" type="button" data-cat="women">Эмэгтэй</button>
+            <button class="cat-item" type="button" data-cat="tech">Технологи</button>
+            <button class="cat-item" type="button" data-cat="kids">Хүүхдийн</button>
+            <button class="cat-item" type="button" data-cat="home">Гэрийн & Тавилга</button>
+          </div>
+
+          <div class="category-right">
+            <div class="cat-content active" id="men">
+              <h3>Эрэгтэй</h3>
+              <a href="../master/baraa.html">Цамц</a>
+              <a href="../master/baraa.html">Өмд</a>
+              <a href="../master/baraa.html">Гутал</a>
+            </div>
+
+            <div class="cat-content" id="women">
+              <h3>Эмэгтэй</h3>
+              <a href="../master/baraa.html">Даашинз</a>
+              <a href="../master/baraa.html">Цүнх</a>
+              <a href="../master/baraa.html">Гутал</a>
+              <a href="../master/baraa.html">Гадуур хувцас</a>
+              <a href="../master/baraa.html">Гоёл чимэглэл</a>
+              <a href="../master/baraa.html">Нүүр будалт</a>
+            </div>
+
+            <div class="cat-content" id="tech">
+              <h3>Технологи</h3>
+              <a href="../master/baraa.html">Гар утас</a>
+              <a href="../master/baraa.html">Laptop</a>
+              <a href="../master/baraa.html">Чихэвч</a>
+            </div>
+
+            <div class="cat-content" id="kids">
+              <h3>Хүүхдийн</h3>
+              <a href="../master/baraa.html">Тоглоом</a>
+              <a href="../master/baraa.html">Хувцас</a>
+              <a href="../master/baraa.html">Гутал</a>
+            </div>
+
+            <div class="cat-content" id="home">
+              <h3>Гэрийн & Тавилга</h3>
+              <a href="../master/baraa.html">Хүрээ</a>
+              <a href="../master/baraa.html">Тавилга</a>
+              <a href="../master/baraa.html">Гэр ахуйн бараа</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <main class="container content-area">
+    <div class="empty-body">
+      <h2>Ангиллаа сонгоод бараа руу орно уу</h2>
+      <p><strong>БҮХ АНГИЛАЛ</strong> дээр дарж доторх менюг нээгээрэй.</p>
+    </div>
+  </main>
+
+  <footer class="shoppy-footer">
+    <div class="container footer-main">
+      <div class="footer-col">
+        <div class="footer-logo">shoppy</div>
+        <p>Монголын хамгийн том цахим дэлгүүр</p>
+      </div>
+
+      <div class="footer-col">
+        <h3>Тусламж</h3>
+        <a href="FAQ">Түгээмэл асуултууд</a>
+        <a href="Terms">Үйлчилгээний нөхцөл</a>
+        <a href="Privacy">Нууцлалын бодлого</a>
+      </div>
+
+      <div class="footer-col">
+        <h3>Холбоо барих</h3>
+        <p>И-мэйл: order@shoppy.mn</p>
+        <p>Утас: 7777-XXXX</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="baraaniangilal.js"></script>
+</body>
+</html>
