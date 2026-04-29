@@ -36,6 +36,12 @@
           <option>Бүгд</option>
           <option>Электрон бараа</option>
           <option>Гоо сайхан</option>
+          <option>Гэр ахуйн бараа</option>
+          <option>Эрэгтэй</option>
+          <option>Эмэгтэй</option>
+          <option>Технологи</option>
+          <option>Хүүхдийн</option>
+          <option>Гэрийн тавилга</option>
         </select>
         <input class="search-input" type="text" placeholder="Бараа, брэнд хайх..." />
         <button class="search-btn" type="button" aria-label="Хайх">Хайх</button>
@@ -60,7 +66,8 @@
           aria-expanded="false"
           aria-controls="categoryPanel"
         >
-          ☰ БҮХ АНГИЛАЛ
+          <span>☰ БҮХ АНГИЛАЛ</span>
+          <span>▾</span>
         </button>
 
         <div class="category-dropdown" id="categoryPanel">
@@ -69,46 +76,69 @@
             <button class="cat-item" type="button" data-cat="women">Эмэгтэй</button>
             <button class="cat-item" type="button" data-cat="tech">Технологи</button>
             <button class="cat-item" type="button" data-cat="kids">Хүүхдийн</button>
-            <button class="cat-item" type="button" data-cat="home">Гэрийн & Тавилга</button>
+            <button class="cat-item" type="button" data-cat="home">Гэрийн тавилга</button>
+            <button class="cat-item" type="button" data-cat="electronics">Электрон бараа</button>
+            <button class="cat-item" type="button" data-cat="cosmetics">Гоо сайхан</button>
+            <button class="cat-item" type="button" data-cat="household">Гэр ахуйн бараа</button>
           </div>
 
           <div class="category-right">
             <div class="cat-content active" id="men">
-              <h3>Эрэгтэй</h3>
-              <a href="../master/baraa.html">Цамц</a>
-              <a href="../master/baraa.html">Өмд</a>
-              <a href="../master/baraa.html">Гутал</a>
+              <h3><a href="../master/baraa.html?category=men">Эрэгтэй</a></h3>
+              <a href="../master/baraa.html?category=men&subcategory=shirt">Цамц</a>
+              <a href="../master/baraa.html?category=men&subcategory=pants">Өмд</a>
+              <a href="../master/baraa.html?category=men&subcategory=shoes">Гутал</a>
             </div>
 
             <div class="cat-content" id="women">
-              <h3>Эмэгтэй</h3>
-              <a href="../master/baraa.html">Даашинз</a>
-              <a href="../master/baraa.html">Цүнх</a>
-              <a href="../master/baraa.html">Гутал</a>
-              <a href="../master/baraa.html">Гадуур хувцас</a>
-              <a href="../master/baraa.html">Гоёл чимэглэл</a>
-              <a href="../master/baraa.html">Нүүр будалт</a>
+              <h3><a href="../master/baraa.html?category=women">Эмэгтэй</a></h3>
+              <a href="../master/baraa.html?category=women&subcategory=dress">Даашинз</a>
+              <a href="../master/baraa.html?category=women&subcategory=bag">Цүнх</a>
+              <a href="../master/baraa.html?category=women&subcategory=shoes">Гутал</a>
+              <a href="../master/baraa.html?category=women&subcategory=outerwear">Гадуур хувцас</a>
+              <a href="../master/baraa.html?category=women&subcategory=jewelry">Гоёл чимэглэл</a>
+              <a href="../master/baraa.html?category=women&subcategory=makeup">Нүүр будалт</a>
             </div>
 
             <div class="cat-content" id="tech">
-              <h3>Технологи</h3>
-              <a href="../master/baraa.html">Гар утас</a>
-              <a href="../master/baraa.html">Laptop</a>
-              <a href="../master/baraa.html">Чихэвч</a>
+              <h3><a href="../master/baraa.html?category=tech">Технологи</a></h3>
+              <a href="../master/baraa.html?category=tech&subcategory=phone">Гар утас</a>
+              <a href="../master/baraa.html?category=tech&subcategory=laptop">Laptop</a>
+              <a href="../master/baraa.html?category=tech&subcategory=headphones">Чихэвч</a>
             </div>
 
             <div class="cat-content" id="kids">
-              <h3>Хүүхдийн</h3>
-              <a href="../master/baraa.html">Тоглоом</a>
-              <a href="../master/baraa.html">Хувцас</a>
-              <a href="../master/baraa.html">Гутал</a>
+              <h3><a href="../master/baraa.html?category=kids">Хүүхдийн</a></h3>
+              <a href="../master/baraa.html?category=kids&subcategory=toy">Тоглоом</a>
+              <a href="../master/baraa.html?category=kids&subcategory=clothes">Хувцас</a>
+              <a href="../master/baraa.html?category=kids&subcategory=shoes">Гутал</a>
             </div>
 
             <div class="cat-content" id="home">
-              <h3>Гэрийн & Тавилга</h3>
-              <a href="../master/baraa.html">Хүрээ</a>
-              <a href="../master/baraa.html">Тавилга</a>
-              <a href="../master/baraa.html">Гэр ахуйн бараа</a>
+              <h3><a href="../master/baraa.html?category=home">Гэрийн тавилга</a></h3>
+              <a href="../master/baraa.html?category=home&subcategory=frame">Хүрээ</a>
+              <a href="../master/baraa.html?category=home&subcategory=furniture">Тавилга</a>
+              <a href="../master/baraa.html?category=home&subcategory=household">Гэр ахуйн бараа</a>
+            </div>
+
+            <div class="cat-content" id="electronics">
+              <h3><a href="../master/baraa.html?category=electronics">Электрон бараа</a></h3>
+              <a href="../master/baraa.html?category=electronics&subcategory=phone">Гар утас</a>
+              <a href="../master/baraa.html?category=electronics&subcategory=laptop">Laptop</a>
+              <a href="../master/baraa.html?category=electronics&subcategory=headphones">Чихэвч</a>
+            </div>
+
+            <div class="cat-content" id="cosmetics">
+              <h3><a href="../master/baraa.html?category=cosmetics">Гоо сайхан</a></h3>
+              <a href="../master/baraa.html?category=cosmetics&subcategory=makeup">Нүүр будалт</a>
+              <a href="../master/baraa.html?category=cosmetics&subcategory=skincare">Арьс арчилгаа</a>
+            </div>
+
+            <div class="cat-content" id="household">
+              <h3><a href="../master/baraa.html?category=household">Гэр ахуйн бараа</a></h3>
+              <a href="../master/baraa.html?category=household&subcategory=frame">Хүрээ</a>
+              <a href="../master/baraa.html?category=household&subcategory=furniture">Тавилга</a>
+              <a href="../master/baraa.html?category=household&subcategory=household">Гэр ахуйн бараа</a>
             </div>
           </div>
         </div>
@@ -119,8 +149,30 @@
   <main class="container content-area">
     <div class="empty-body">
       <h2>Ангиллаа сонгоод бараа руу орно уу</h2>
-      <p><strong>БҮХ АНГИЛАЛ</strong> дээр дарж доторх менюг нээгээрэй.</p>
+      <p><strong>БҮХ АНГИЛАЛ</strong> дээр дарж зүүн талын category эсвэл баруун талын доторх барааг сонгоно.</p>
     </div>
+
+    <section class="home-section" aria-labelledby="homeCategoriesTitle">
+      <div class="section-heading">
+        <div>
+          <p class="section-eyebrow">Shoppy categories</p>
+          <h2 id="homeCategoriesTitle">Ангиллууд</h2>
+        </div>
+        <a class="section-link" href="../master/baraa.html">Бүх бараа харах</a>
+      </div>
+      <div class="home-category-grid" id="homeCategoryGrid"></div>
+    </section>
+
+    <section class="home-section" aria-labelledby="featuredProductsTitle">
+      <div class="section-heading">
+        <div>
+          <p class="section-eyebrow">Editor's picks</p>
+          <h2 id="featuredProductsTitle">Онцлох бараанууд</h2>
+        </div>
+        <a class="section-link" href="../master/baraa.html">Бүгдийг үзэх</a>
+      </div>
+      <div class="featured-product-grid" id="featuredProductGrid"></div>
+    </section>
   </main>
 
   <footer class="shoppy-footer">
@@ -145,6 +197,7 @@
     </div>
   </footer>
 
+  <script src="product-data.js"></script>
   <script src="baraaniangilal.js"></script>
 </body>
 </html>

@@ -1,0 +1,93 @@
+/* Baraa page uses the same base styling as MasterPages/style.css. */
+.baraa-page {
+  min-height: 100vh;
+}
+
+.baraa-page .content-area {
+  padding-top: 32px;
+  padding-bottom: 56px;
+}
+
+.baraa-page .catalog-breadcrumb,
+.baraa-page .catalog-sidebar-card,
+.baraa-page .catalog-filter-card,
+.baraa-page .catalog-products-section,
+.baraa-page .catalog-hero,
+.baraa-page .product-detail-card,
+.baraa-page .product-card {
+  border-radius: 16px;
+}
+
+.baraa-page .catalog-hero {
+  display: flex;
+  min-height: 240px;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.baraa-page .catalog-hero h1 {
+  max-width: 760px;
+}
+
+.baraa-page .catalog-hero > p {
+  max-width: 680px;
+  line-height: 1.65;
+}
+
+.baraa-page .catalog-sidebar-card {
+  max-height: calc(100vh - 150px);
+  overflow: auto;
+}
+
+.baraa-page .catalog-side-link,
+.baraa-page .catalog-sub-link,
+.baraa-page .catalog-chip,
+.baraa-page .related-product-card {
+  outline: 0;
+}
+
+.baraa-page .catalog-side-link:focus-visible,
+.baraa-page .catalog-sub-link:focus-visible,
+.baraa-page .catalog-chip:focus-visible,
+.baraa-page .catalog-text-link:focus-visible,
+.baraa-page .product-card-link:focus-visible,
+.baraa-page .related-product-card:focus-visible,
+.baraa-page .search-btn:focus-visible {
+  box-shadow: 0 0 0 3px rgba(126, 44, 201, 0.2);
+}
+
+.baraa-page .product-card-link {
+  min-height: 100%;
+}
+
+.baraa-page .product-card-body {
+  align-content: start;
+}
+
+.baraa-page .product-card-price-row {
+  margin-top: auto;
+}
+
+.baraa-page .product-card-media span,
+.baraa-page .product-detail-media span,
+.baraa-page .related-product-media span {
+  position: relative;
+  z-index: 1;
+}
+
+@media (max-width: 992px) {
+  .baraa-page .catalog-sidebar-card {
+    max-height: none;
+  }
+}
+
+@media (max-width: 520px) {
+  .baraa-page .content-area {
+    padding-top: 22px;
+    padding-bottom: 36px;
+  }
+
+  .baraa-page .catalog-hero {
+    min-height: 210px;
+  }
+}
