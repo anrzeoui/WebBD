@@ -55,7 +55,7 @@
 
   <nav class="menu-bar">
     <div class="container menu-inner">
-      <button class="category-btn" type="button">☰ БҮХ АНГИЛАЛ</button>
+      <button class="category-btn" id="categoryMenuToggle" type="button" aria-expanded="false" aria-controls="categoryMega">☰ БҮХ АНГИЛАЛ</button>
       <div class="menu-links">
         <a href="#">Нүүр</a>
         <a href="#">Шинэ</a>
@@ -64,17 +64,38 @@
         <a href="#">Тасалбар</a>
       </div>
     </div>
+
+    <div class="category-mega hidden" id="categoryMega" aria-hidden="true">
+      <div class="container category-mega-shell">
+        <aside class="mega-sidebar" id="megaCategoryList" aria-label="Ангиллууд"></aside>
+
+        <div class="mega-main">
+          <div class="mega-title-row">
+            <h2 id="megaCategoryTitle">Эмэгтэй</h2>
+            <button class="mega-view-all" id="megaViewAll" type="button">Бүгдийг үзэх</button>
+          </div>
+
+          <div class="mega-columns" id="megaColumns"></div>
+        </div>
+
+        <a class="mega-promo" id="megaPromo" href="#" aria-label="Онцлох ангилал">
+          <img id="megaPromoImage" src="pictures/coat-card.svg" alt="" />
+          <span id="megaPromoText">Онцлох</span>
+        </a>
+      </div>
+    </div>
   </nav>
 
   <main class="container content-area">
     <div class="empty-body" id="searchState">
       <h1>Shoppy main page</h1>
+
       <p>Дээрх хайлтаар бараа, брэнд, ангиллаа шүүж туршиж болно.</p>
     </div>
 
     <section class="results-wrap hidden" id="resultsWrap">
       <div class="results-head">
-        <h2>Хайлтын илэрц</h2>
+        <h2 id="resultsTitle">Хайлтын илэрц</h2>
         <span id="resultsCount">0 бараа</span>
       </div>
       <div class="results-grid" id="searchResults"></div>
