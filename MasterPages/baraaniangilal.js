@@ -128,9 +128,9 @@ function setupSearchNavigation() {
     const query = searchInput.value.trim();
     const url = new URL("../master/baraa.html", window.location.href);
     const categoryMap = {
-      "Электрон бараа": "electronics",
+      "Электрон бараа": "tech",
       "Гоо сайхан": "cosmetics",
-      "Гэр ахуйн бараа": "household",
+      "Гэр ахуйн бараа": "home",
       "Эрэгтэй": "men",
       "Эмэгтэй": "women",
       "Технологи": "tech",

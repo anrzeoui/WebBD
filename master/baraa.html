@@ -35,14 +35,12 @@
       <div class="search-area">
         <select class="search-category" aria-label="Ангилал сонгох">
           <option value="">Бүгд</option>
-          <option value="electronics">Электрон бараа</option>
-          <option value="cosmetics">Гоо сайхан</option>
-          <option value="household">Гэр ахуйн бараа</option>
           <option value="men">Эрэгтэй</option>
           <option value="women">Эмэгтэй</option>
-          <option value="tech">Технологи</option>
+          <option value="tech">Электрон бараа</option>
           <option value="kids">Хүүхдийн</option>
           <option value="home">Гэрийн тавилга</option>
+          <option value="cosmetics">Гоо сайхан</option>
         </select>
         <input class="search-input" type="text" placeholder="Бараа, брэнд хайх..." />
         <button class="search-btn" type="button" aria-label="Хайх">Хайх</button>
@@ -75,12 +73,10 @@
           <div class="category-left">
             <button class="cat-item active" type="button" data-cat="men">Эрэгтэй</button>
             <button class="cat-item" type="button" data-cat="women">Эмэгтэй</button>
-            <button class="cat-item" type="button" data-cat="tech">Технологи</button>
+            <button class="cat-item" type="button" data-cat="tech">Электрон бараа</button>
             <button class="cat-item" type="button" data-cat="kids">Хүүхдийн</button>
             <button class="cat-item" type="button" data-cat="home">Гэрийн тавилга</button>
-            <button class="cat-item" type="button" data-cat="electronics">Электрон бараа</button>
             <button class="cat-item" type="button" data-cat="cosmetics">Гоо сайхан</button>
-            <button class="cat-item" type="button" data-cat="household">Гэр ахуйн бараа</button>
           </div>
 
           <div class="category-right">
@@ -89,6 +85,9 @@
               <a href="baraa.html?category=men&subcategory=shirt">Цамц</a>
               <a href="baraa.html?category=men&subcategory=pants">Өмд</a>
               <a href="baraa.html?category=men&subcategory=shoes">Гутал</a>
+              <a href="baraa.html?category=men&subcategory=underwear">Дотуур хувцас</a>
+              <a href="baraa.html?category=men&subcategory=sneakers">Пүүз & Кет</a>
+              <a href="baraa.html?category=men&subcategory=suits">Хослол & Дан хүрэм</a>
             </div>
 
             <div class="cat-content" id="women">
@@ -98,7 +97,7 @@
               <a href="baraa.html?category=women&subcategory=shoes">Гутал</a>
               <a href="baraa.html?category=women&subcategory=outerwear">Гадуур хувцас</a>
               <a href="baraa.html?category=women&subcategory=jewelry">Гоёл чимэглэл</a>
-              <a href="baraa.html?category=women&subcategory=makeup">Нүүр будалт</a>
+              <a href="baraa.html?category=women&subcategory=suits">Хослол & Дан хүрэм</a>
             </div>
 
             <div class="cat-content" id="tech">
@@ -106,6 +105,8 @@
               <a href="baraa.html?category=tech&subcategory=phone">Гар утас</a>
               <a href="baraa.html?category=tech&subcategory=laptop">Laptop</a>
               <a href="baraa.html?category=tech&subcategory=headphones">Чихэвч</a>
+              <a href="baraa.html?category=tech&subcategory=phone-accessories">Гар утасны дагалдах хэрэгсэл</a>
+              <a href="baraa.html?category=tech&subcategory=computer-accessories">Компьютерын дагалдах хэрэгсэл</a>
             </div>
 
             <div class="cat-content" id="kids">
@@ -113,6 +114,8 @@
               <a href="baraa.html?category=kids&subcategory=toy">Тоглоом</a>
               <a href="baraa.html?category=kids&subcategory=clothes">Хувцас</a>
               <a href="baraa.html?category=kids&subcategory=shoes">Гутал</a>
+              <a href="baraa.html?category=kids&subcategory=backpack">Үүргэвч</a>
+              <a href="baraa.html?category=kids&subcategory=care">Хүүхэд арчилгаа</a>
             </div>
 
             <div class="cat-content" id="home">
@@ -120,26 +123,21 @@
               <a href="baraa.html?category=home&subcategory=frame">Хүрээ</a>
               <a href="baraa.html?category=home&subcategory=furniture">Тавилга</a>
               <a href="baraa.html?category=home&subcategory=household">Гэр ахуйн бараа</a>
-            </div>
-
-            <div class="cat-content" id="electronics">
-              <h3><a href="baraa.html?category=electronics">Электрон бараа</a></h3>
-              <a href="baraa.html?category=electronics&subcategory=phone">Гар утас</a>
-              <a href="baraa.html?category=electronics&subcategory=laptop">Laptop</a>
-              <a href="baraa.html?category=electronics&subcategory=headphones">Чихэвч</a>
+              <a href="baraa.html?category=home&subcategory=bedding">Матрасс & Ор дэрний хэрэглэл дагалдах хэрэгсэл</a>
+              <a href="baraa.html?category=home&subcategory=carpet">Гэрийн Хивс & Дэвсгэр</a>
+              <a href="baraa.html?category=home&subcategory=lighting">Гэрийн гэрэлтүүлэг</a>
             </div>
 
             <div class="cat-content" id="cosmetics">
               <h3><a href="baraa.html?category=cosmetics">Гоо сайхан</a></h3>
               <a href="baraa.html?category=cosmetics&subcategory=makeup">Нүүр будалт</a>
               <a href="baraa.html?category=cosmetics&subcategory=skincare">Арьс арчилгаа</a>
-            </div>
-
-            <div class="cat-content" id="household">
-              <h3><a href="baraa.html?category=household">Гэр ахуйн бараа</a></h3>
-              <a href="baraa.html?category=household&subcategory=frame">Хүрээ</a>
-              <a href="baraa.html?category=household&subcategory=furniture">Тавилга</a>
-              <a href="baraa.html?category=household&subcategory=household">Гэр ахуйн бараа</a>
+              <a href="baraa.html?category=cosmetics&subcategory=haircare">Үс арчилгаа</a>
+              <a href="baraa.html?category=cosmetics&subcategory=oralcare">Амны хөндийн арчилгаа сайхны дагалдах хэрэгсэл</a>
+              <a href="baraa.html?category=cosmetics&subcategory=beauty-tools">Гоо сайхны Багаж & Багс</a>
+              <a href="baraa.html?category=cosmetics&subcategory=nailcare">Гар, Хумс арчилгаа сайхны Багаж & Багс</a>
+              <a href="baraa.html?category=cosmetics&subcategory=beauty-accessories">Гоо сайхны дагалдах хэрэгсэл</a>
+              <a href="baraa.html?category=cosmetics&subcategory=fragrance">Үнэртэн сайхны хэрэгсэл</a>
             </div>
           </div>
         </div>
