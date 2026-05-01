@@ -1,486 +1,5 @@
-const products = [
-  {
-    id: 1,
-    name: "Пальто",
-    brand: "LIU JO",
-    category: "Эмэгтэй",
-    price: "329,000 ₮",
-    description: "Өвлийн эмэгтэй пальто.",
-    size: "M",
-    image: "pictures/coat-card.svg",
-    tags: ["эмэгтэй", "пальто", "гадуур хувцас", "coat"],
-    colorA: "#f5d0fe",
-    colorB: "#c084fc",
-  },
-  {
-    id: 2,
-    name: "Юбка",
-    brand: "MANGO",
-    category: "Эмэгтэй",
-    price: "89,000 ₮",
-    description: "Өдөр тутмын эвтэйхэн юбка.",
-    size: "S",
-    image: "pictures/skirt-card.svg",
-    tags: ["юбка", "эмэгтэй", "skirt"],
-    colorA: "#fde68a",
-    colorB: "#f59e0b",
-  },
-  {
-    id: 3,
-    name: "Даашинз",
-    brand: "ZARA",
-    category: "Эмэгтэй",
-    price: "149,000 ₮",
-    description: "Гоёлын болон өдөр тутмын даашинз.",
-    size: "M",
-    image: "pictures/dress-card.svg",
-    tags: ["даашинз", "эмэгтэй", "dress"],
-    colorA: "#fecdd3",
-    colorB: "#fb7185",
-  },
-  {
-    id: 13,
-    name: "Эмэгтэй футболка",
-    brand: "UNIQLO",
-    category: "Эмэгтэй",
-    price: "59,000 ₮",
-    description: "Зуны хөнгөн футболка ба майк.",
-    size: "S-M",
-    image: "pictures/shirt-card.svg",
-    tags: ["эмэгтэй", "футболка", "майк", "цамц", "t-shirt"],
-    colorA: "#d1fae5",
-    colorB: "#10b981",
-  },
-  {
-    id: 4,
-    name: "Эрэгтэй цамц",
-    brand: "UNIQLO",
-    category: "Эрэгтэй",
-    price: "99,000 ₮",
-    description: "Сонгодог эрэгтэй цамц.",
-    size: "L",
-    image: "pictures/shirt-card.svg",
-    tags: ["эрэгтэй", "цамц", "shirt", "футболка"],
-    colorA: "#bfdbfe",
-    colorB: "#2563eb",
-  },
-  {
-    id: 5,
-    name: "Цүнх",
-    brand: "CHARLES & KEITH",
-    category: "Эмэгтэй",
-    price: "210,000 ₮",
-    description: "Гар цүнх болон мөрний цүнх.",
-    size: "One size",
-    image: "pictures/bag-card.svg",
-    tags: ["цүнх", "bag", "эмэгтэй"],
-    colorA: "#cbd5e1",
-    colorB: "#475569",
-  },
-  {
-    id: 6,
-    name: "Кет",
-    brand: "VANS",
-    category: "Эрэгтэй",
-    price: "159,000 ₮",
-    description: "Өдөр тутмын кет.",
-    size: "42",
-    image: "pictures/sneaker-card.svg",
-    tags: ["кет", "гутал", "эрэгтэй", "эмэгтэй", "sneaker"],
-    colorA: "#e5e7eb",
-    colorB: "#6b7280",
-  },
-  {
-    id: 7,
-    name: "Ширээний бүтээлэг",
-    brand: "HUSUG",
-    category: "Гэрийн бараа",
-    price: "77,000 ₮",
-    description: "Гэрийн интерьерийн ширээний бүтээлэг.",
-    size: "150x220",
-    image: "pictures/tablecloth-card.svg",
-    tags: ["ширээний бүтээлэг", "гэрийн бараа", "tablecloth"],
-    colorA: "#f3f4f6",
-    colorB: "#d1d5db",
-  },
-  {
-    id: 8,
-    name: "Чүдэнзний сав",
-    brand: "HUSUG",
-    category: "Гэрийн бараа",
-    price: "49,000 ₮",
-    description: "Чимэглэлийн керамик сав.",
-    size: "Small",
-    image: "pictures/mug-card.svg",
-    tags: ["сав", "аяга", "гэрийн бараа", "mug"],
-    colorA: "#e0f2fe",
-    colorB: "#7dd3fc",
-  },
-  {
-    id: 9,
-    name: "Diffuser",
-    brand: "HUSUG",
-    category: "Гэрийн бараа",
-    price: "99,000 ₮",
-    description: "Өрөөний үнэртүүлэгч diffuser.",
-    size: "Standard",
-    image: "pictures/diffuser-card.svg",
-    tags: ["diffuser", "үнэртүүлэгч", "гэрийн бараа"],
-    colorA: "#fae8ff",
-    colorB: "#d946ef",
-  },
-  {
-    id: 10,
-    name: "Уруулын будаг",
-    brand: "MAC",
-    category: "Гоо сайхан",
-    price: "58,000 ₮",
-    description: "Тод өнгийн уруулын будаг.",
-    size: "3.5g",
-    image: "pictures/lipstick-card.svg",
-    tags: ["уруулын будаг", "гоо сайхан", "lipstick"],
-    colorA: "#fecdd3",
-    colorB: "#e11d48",
-  },
-  {
-    id: 11,
-    name: "Нүдний будгийн палет",
-    brand: "HUDA",
-    category: "Гоо сайхан",
-    price: "125,000 ₮",
-    description: "Олон өнгийн будгийн палет.",
-    size: "12 өнгө",
-    image: "pictures/palette-card.svg",
-    tags: ["палет", "будгийн палет", "гоо сайхан"],
-    colorA: "#fef3c7",
-    colorB: "#f97316",
-  },
-  {
-    id: 12,
-    name: "Ухаалаг цаг",
-    brand: "XIAOMI",
-    category: "Технологи",
-    price: "245,000 ₮",
-    description: "Өдөр тутмын ухаалаг цаг.",
-    size: "42mm",
-    image: "pictures/smartwatch-card.svg",
-    tags: ["ухаалаг цаг", "цаг", "smartwatch", "технологи"],
-    colorA: "#dbeafe",
-    colorB: "#1d4ed8",
-  },
-];
-
-const megaCategories = [
-  {
-    id: "women",
-    title: "Эмэгтэй",
-    searchCategory: "Эмэгтэй",
-    icon: "♙",
-    promoImage: "pictures/coat-card.svg",
-    promoText: "LIU JO",
-    groups: [
-      {
-        title: "Эмэгтэй хувцас",
-        links: [
-          { label: "Гадуур хувцас", terms: ["гадуур хувцас", "пальто", "coat"] },
-          { label: "Футболка & Майк", terms: ["футболка", "майк", "t-shirt"] },
-          { label: "Цамц", terms: ["цамц", "shirt"] },
-          { label: "Даашинз", terms: ["даашинз", "dress"] },
-          { label: "Юбка", terms: ["юбка", "skirt"] },
-        ],
-      },
-      {
-        title: "Хувцасны аксессуар & Дотуур хувцас",
-        links: [
-          { label: "Малгай & Ороолт", terms: ["малгай", "ороолт"] },
-          { label: "Дотуур хувцас", terms: ["дотуур хувцас"] },
-          { label: "Оймс", terms: ["оймс"] },
-          { label: "Нарны шил & Шил", terms: ["нарны шил", "шил"] },
-        ],
-      },
-      {
-        title: "Эмэгтэй гутал",
-        links: [
-          { label: "Ботинка & Хавтгай ултай гутал", terms: ["ботинка", "гутал"] },
-          { label: "Пүүз & Кет", terms: ["пүүз", "кет", "sneaker"] },
-          { label: "Өндөр өсгийт & Сандаль", terms: ["сандаль", "өндөр өсгийт"] },
-        ],
-      },
-      {
-        title: "Цүнх & Чемодан",
-        links: [
-          { label: "Чемодан & Тээшний цүнх", terms: ["чемодан", "тээш"] },
-          { label: "Үүргэвч", terms: ["үүргэвч"] },
-          { label: "Гар цүнх", terms: ["гар цүнх", "цүнх", "bag"] },
-        ],
-      },
-    ],
-  },
-  {
-    id: "men",
-    title: "Эрэгтэй",
-    searchCategory: "Эрэгтэй",
-    icon: "♘",
-    promoImage: "pictures/shirt-card.svg",
-    promoText: "UNIQLO",
-    groups: [
-      {
-        title: "Эрэгтэй хувцас",
-        links: [
-          { label: "Цамц", terms: ["цамц", "shirt"] },
-          { label: "Футболка", terms: ["футболка", "t-shirt"] },
-          { label: "Хослол & Пиджак", terms: ["хослол", "пиджак"] },
-        ],
-      },
-      {
-        title: "Эрэгтэй гутал",
-        links: [
-          { label: "Пүүз & Кет", terms: ["пүүз", "кет", "sneaker"] },
-          { label: "Ботинк", terms: ["ботинк", "гутал"] },
-          { label: "Углааш", terms: ["углааш"] },
-        ],
-      },
-    ],
-  },
-  {
-    id: "kids",
-    title: "Хүүхдийн",
-    searchCategory: "Хүүхдийн",
-    icon: "♧",
-    promoImage: "pictures/sneaker-card.svg",
-    promoText: "Kids",
-    groups: [
-      {
-        title: "Хүүхдийн хувцас",
-        links: [
-          { label: "Охидын хувцас", terms: ["охид", "хүүхдийн"] },
-          { label: "Хөвгүүдийн хувцас", terms: ["хөвгүүд", "хүүхдийн"] },
-          { label: "Хүүхдийн гутал", terms: ["хүүхдийн гутал", "кет"] },
-        ],
-      },
-    ],
-  },
-  {
-    id: "home",
-    title: "Гэрийн & Тавилга",
-    searchCategory: "Гэрийн бараа",
-    icon: "⌂",
-    promoImage: "pictures/tablecloth-card.svg",
-    promoText: "Home",
-    groups: [
-      {
-        title: "Гэр ахуй",
-        links: [
-          { label: "Ширээний бүтээлэг", terms: ["ширээний бүтээлэг", "tablecloth"] },
-          { label: "Аяга & Сав", terms: ["аяга", "сав", "mug"] },
-          { label: "Үнэртүүлэгч", terms: ["үнэртүүлэгч", "diffuser"] },
-        ],
-      },
-      {
-        title: "Тавилга",
-        links: [
-          { label: "Гал тогоо", terms: ["гал тогоо"] },
-          { label: "Унтлагын өрөө", terms: ["унтлагын"] },
-          { label: "Зочны өрөө", terms: ["зочны"] },
-        ],
-      },
-    ],
-  },
-  {
-    id: "tech",
-    title: "Технологи",
-    searchCategory: "Технологи",
-    icon: "▣",
-    promoImage: "pictures/smartwatch-card.svg",
-    promoText: "XIAOMI",
-    groups: [
-      {
-        title: "Ухаалаг төхөөрөмж",
-        links: [
-          { label: "Ухаалаг цаг", terms: ["ухаалаг цаг", "smartwatch"] },
-          { label: "Гар утас", terms: ["гар утас"] },
-          { label: "Чихэвч", terms: ["чихэвч"] },
-        ],
-      },
-      {
-        title: "Компьютер",
-        links: [
-          { label: "Зөөврийн компьютер", terms: ["зөөврийн компьютер"] },
-          { label: "Дагалдах хэрэгсэл", terms: ["аксессуар", "дагалдах"] },
-        ],
-      },
-    ],
-  },
-  {
-    id: "appliance",
-    title: "Цахилгаан хэрэгсэл",
-    searchCategory: "Цахилгаан хэрэгсэл",
-    icon: "▤",
-    promoImage: "pictures/diffuser-card.svg",
-    promoText: "Appliance",
-    groups: [
-      {
-        title: "Гэр ахуйн цахилгаан",
-        links: [
-          { label: "Гал тогооны хэрэгсэл", terms: ["гал тогоо", "цахилгаан"] },
-          { label: "Цэвэрлэгээ", terms: ["цэвэрлэгээ"] },
-          { label: "Агааржуулагч", terms: ["агаар"] },
-        ],
-      },
-    ],
-  },
-  {
-    id: "beauty",
-    title: "Гоо сайхан",
-    searchCategory: "Гоо сайхан",
-    icon: "◇",
-    promoImage: "pictures/lipstick-card.svg",
-    promoText: "Beauty",
-    groups: [
-      {
-        title: "Нүүр будалт",
-        links: [
-          { label: "Уруулын будаг", terms: ["уруулын будаг", "lipstick"] },
-          { label: "Будгийн палет", terms: ["палет", "будгийн палет"] },
-          { label: "Суурь крем", terms: ["крем"] },
-        ],
-      },
-      {
-        title: "Арьс арчилгаа",
-        links: [
-          { label: "Цэвэрлэгч", terms: ["цэвэрлэгч"] },
-          { label: "Тос & Серум", terms: ["тос", "серум"] },
-        ],
-      },
-    ],
-  },
-  {
-    id: "health",
-    title: "Эрүүл мэнд & Эрүүл ахуй",
-    searchCategory: "Эрүүл мэнд",
-    icon: "⊕",
-    promoImage: "pictures/palette-card.svg",
-    promoText: "Wellness",
-    groups: [
-      {
-        title: "Эрүүл мэнд",
-        links: [
-          { label: "Витамин", terms: ["витамин"] },
-          { label: "Амны арчилгаа", terms: ["амны арчилгаа"] },
-          { label: "Ариун цэвэр", terms: ["ариун цэвэр"] },
-        ],
-      },
-    ],
-  },
-  {
-    id: "jewelry",
-    title: "Гоёл чимэглэл",
-    searchCategory: "Гоёл чимэглэл",
-    icon: "◇",
-    promoImage: "pictures/bag-card.svg",
-    promoText: "Accessories",
-    groups: [
-      {
-        title: "Чимэглэл",
-        links: [
-          { label: "Ээмэг", terms: ["ээмэг"] },
-          { label: "Зүүлт", terms: ["зүүлт"] },
-          { label: "Бугуйвч", terms: ["бугуйвч"] },
-        ],
-      },
-    ],
-  },
-  {
-    id: "sport",
-    title: "Спорт & Аялал",
-    searchCategory: "Спорт",
-    icon: "◌",
-    promoImage: "pictures/sneaker-card.svg",
-    promoText: "Sport",
-    groups: [
-      {
-        title: "Спорт",
-        links: [
-          { label: "Спорт гутал", terms: ["спорт", "гутал", "кет"] },
-          { label: "Аяллын цүнх", terms: ["аяллын", "цүнх"] },
-          { label: "Дасгалын хэрэгсэл", terms: ["дасгал"] },
-        ],
-      },
-    ],
-  },
-  {
-    id: "food",
-    title: "Хүнс",
-    searchCategory: "Хүнс",
-    icon: "▥",
-    promoImage: "pictures/mug-card.svg",
-    promoText: "Food",
-    groups: [
-      {
-        title: "Хүнс",
-        links: [
-          { label: "Ундаа", terms: ["ундаа"] },
-          { label: "Амттан", terms: ["амттан"] },
-          { label: "Кофе & Цай", terms: ["кофе", "цай"] },
-        ],
-      },
-    ],
-  },
-  {
-    id: "hobby",
-    title: "Тоглоом & Хобби",
-    searchCategory: "Тоглоом",
-    icon: "✧",
-    promoImage: "pictures/palette-card.svg",
-    promoText: "Hobby",
-    groups: [
-      {
-        title: "Тоглоом",
-        links: [
-          { label: "Угсардаг тоглоом", terms: ["угсардаг"] },
-          { label: "Board game", terms: ["board game"] },
-          { label: "Зургийн хэрэгсэл", terms: ["зургийн хэрэгсэл"] },
-        ],
-      },
-    ],
-  },
-  {
-    id: "books",
-    title: "Ном & цомог, пянз",
-    searchCategory: "Ном",
-    icon: "▱",
-    promoImage: "pictures/tablecloth-card.svg",
-    promoText: "Books",
-    groups: [
-      {
-        title: "Ном",
-        links: [
-          { label: "Уран зохиол", terms: ["уран зохиол"] },
-          { label: "Бизнес ном", terms: ["бизнес ном"] },
-          { label: "Цомог & Пянз", terms: ["цомог", "пянз"] },
-        ],
-      },
-    ],
-  },
-  {
-    id: "stationery",
-    title: "Бичиг хэрэг",
-    searchCategory: "Бичиг хэрэг",
-    icon: "▰",
-    promoImage: "pictures/tablecloth-card.svg",
-    promoText: "Stationery",
-    groups: [
-      {
-        title: "Бичиг хэрэг",
-        links: [
-          { label: "Дэвтэр", terms: ["дэвтэр"] },
-          { label: "Үзэг", terms: ["үзэг"] },
-          { label: "Оффис хэрэгсэл", terms: ["оффис"] },
-        ],
-      },
-    ],
-  },
-];
+const products = window.products || [];
+const megaCategories = window.megaCategories || [];
 
 const searchInput = document.getElementById("searchInput");
 const searchCategory = document.getElementById("searchCategory");
@@ -521,7 +40,7 @@ function getProductText(product) {
     product.brand,
     product.category,
     product.description,
-    ...product.tags,
+    ...(product.tags || []),
   ]
     .join(" ")
     .toLowerCase();
@@ -596,15 +115,15 @@ function renderResults(items, title = "Хайлтын илэрц") {
     .map(
       (product) => `
         <article class="product-card" style="--color-a:${product.colorA}; --color-b:${product.colorB};">
-          <div class="product-thumb">
+          <a class="product-thumb" href="baraa.html?id=${product.id}" aria-label="${product.name} дэлгэрэнгүй">
             <img src="${product.image}" alt="${product.name}" />
             <div class="brand-badge">${product.brand}</div>
-          </div>
+          </a>
           <div class="product-body">
-            <div class="product-name">${product.name}</div>
+            <a class="product-name product-link" href="baraa.html?id=${product.id}">${product.name}</a>
             <p class="product-desc">${product.description}</p>
             <div class="product-meta">
-              <span class="product-category">${product.category}</span>
+              <a class="product-category" href="baraa.html?category=${encodeURIComponent(product.category)}">${product.category}</a>
               <span class="product-price">${product.price}</span>
             </div>
             <button class="add-cart-btn" type="button" data-product-id="${product.id}">Сагсанд нэмэх</button>
@@ -620,10 +139,12 @@ function filterProducts() {
     return;
   }
 
-  const term = searchInput.value.trim().toLowerCase();
-  const category = searchCategory.value.trim().toLowerCase();
+  const term = normalizeText(searchInput.value);
+  const categoryName = searchCategory.value.trim();
+  const category = normalizeText(categoryName);
+  const isAllCategory = category === "бүгд" || category === "";
 
-  if (!term) {
+  if (!term && isAllCategory) {
     if (resultsWrap && searchState && searchResults && resultsCount) {
       resultsWrap.classList.add("hidden");
       searchState.classList.remove("hidden");
@@ -637,16 +158,13 @@ function filterProducts() {
   }
 
   const filtered = products.filter((product) => {
-    const categoryMatch =
-      category === "бүгд" ||
-      category === "" ||
-      product.category.toLowerCase().includes(category);
+    const categoryMatch = isAllCategory || normalizeText(product.category).includes(category);
     const text = getProductText(product);
 
-    return categoryMatch && text.includes(term);
+    return categoryMatch && (!term || text.includes(term));
   });
 
-  renderResults(filtered);
+  renderResults(filtered, term ? "Хайлтын илэрц" : categoryName);
 }
 
 function renderMegaMenu(categoryId = activeMegaCategoryId) {
@@ -665,7 +183,7 @@ function renderMegaMenu(categoryId = activeMegaCategoryId) {
             <span class="mega-category-icon">${category.icon}</span>
             <span>${category.title}</span>
           </span>
-          <span>›</span>
+          <span>&gt;</span>
         </button>
       `
     )
@@ -699,7 +217,7 @@ function renderMegaMenu(categoryId = activeMegaCategoryId) {
               )
               .join("")}
             <button class="mega-link mega-group-view" type="button" data-group-index="${groupIndex}" data-link-index="all">
-              Бүгдийг үзэх →
+              Бүгдийг үзэх &gt;
             </button>
           </div>
         </section>
@@ -738,18 +256,19 @@ function toggleCategoryMega() {
   closeCategoryMega();
 }
 
-function showMegaResults(title, items, categoryName) {
-  if (searchInput) {
-    searchInput.value = title;
+function openProductCatalog(categoryName, query) {
+  const nextParams = new URLSearchParams();
+
+  if (categoryName) {
+    nextParams.set("category", categoryName);
   }
 
-  setSearchCategoryValue(categoryName);
-  renderResults(items, title);
-  closeCategoryMega();
-
-  if (resultsWrap) {
-    resultsWrap.scrollIntoView({ behavior: "smooth", block: "start" });
+  if (query) {
+    nextParams.set("q", query);
   }
+
+  const queryString = nextParams.toString();
+  window.location.href = `baraa.html${queryString ? `?${queryString}` : ""}`;
 }
 
 function getGroupProducts(category, group) {
@@ -767,11 +286,7 @@ function getGroupProducts(category, group) {
 
 function showActiveCategoryResults() {
   const activeCategory = findMegaCategory(activeMegaCategoryId);
-  showMegaResults(
-    activeCategory.title,
-    getCategoryProducts(activeCategory),
-    activeCategory.searchCategory || activeCategory.title
-  );
+  openProductCatalog(activeCategory.searchCategory || activeCategory.title);
 }
 
 function addToCart(productId) {
@@ -792,7 +307,24 @@ function addToCart(productId) {
     numericPrice: normalizePrice(product.price),
   };
 
-  localStorage.setItem("cartItems", JSON.stringify([cartItem]));
+  const saved = localStorage.getItem("cartItems");
+  let cartItems = [];
+
+  try {
+    const parsedItems = saved ? JSON.parse(saved) : [];
+    cartItems = Array.isArray(parsedItems) ? parsedItems : [];
+  } catch {
+    cartItems = [];
+  }
+
+  const existingItem = cartItems.find((item) => item.id === cartItem.id);
+  if (existingItem) {
+    existingItem.quantity = Number(existingItem.quantity || 0) + 1;
+  } else {
+    cartItems.push(cartItem);
+  }
+
+  localStorage.setItem("cartItems", JSON.stringify(cartItems));
   window.location.href = "basket.html";
 }
 
@@ -888,11 +420,7 @@ if (megaColumns) {
     }
 
     if (button.dataset.linkIndex === "all") {
-      showMegaResults(
-        `${activeCategory.title} - ${group.title}`,
-        getGroupProducts(activeCategory, group),
-        activeCategory.searchCategory || activeCategory.title
-      );
+      openProductCatalog(activeCategory.searchCategory || activeCategory.title);
       return;
     }
 
@@ -901,10 +429,9 @@ if (megaColumns) {
       return;
     }
 
-    showMegaResults(
-      link.label,
-      getLinkProducts(activeCategory, link),
-      activeCategory.searchCategory || activeCategory.title
+    openProductCatalog(
+      activeCategory.searchCategory || activeCategory.title,
+      link.terms?.[0] || link.label
     );
   });
 }

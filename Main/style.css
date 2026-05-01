@@ -1,5 +1,13 @@
+:root {
+  --app-font: "Helvetica Neue", Arial, sans-serif;
+}
+
+html {
+  font-family: var(--app-font);
+}
+
 body {
-  font-family: "Helvetica Neue", Arial, sans-serif;
+  font-family: inherit;
   background: #f3f3f5;
   color: #333;
 }
@@ -8,6 +16,13 @@ a {
   text-decoration: none;
   color: inherit;
   transition: color 0.2s ease;
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
 }
 
 .container {
@@ -61,8 +76,11 @@ a {
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
-* {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
+  font-family: inherit;
   margin: 0;
   padding: 0;
 }
@@ -278,7 +296,7 @@ a {
 }
 
 .mega-view-all::after {
-  content: " →";
+  content: " >";
 }
 
 .mega-columns {
@@ -412,8 +430,9 @@ a {
 
 .results-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 22px;
+  grid-template-columns: repeat(auto-fill, minmax(170px, 220px));
+  gap: 16px;
+  align-items: start;
 }
 
 .product-card {
@@ -426,14 +445,16 @@ a {
 
 .product-thumb {
   position: relative;
-  height: 210px;
+  display: block;
+  height: 105px;
   background: linear-gradient(135deg, var(--color-a), var(--color-b));
 }
 
 .product-thumb img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
+  padding: 18px;
   display: block;
 }
 
@@ -450,28 +471,34 @@ a {
 }
 
 .product-body {
-  padding: 16px;
+  padding: 12px;
 }
 
 .product-name {
-  font-size: 22px;
+  display: block;
+  font-size: 16px;
   font-weight: 800;
-  margin-bottom: 10px;
+  margin-bottom: 8px;
   color: #111827;
 }
 
+.product-link:hover {
+  color: #7e2cc9;
+}
+
 .product-desc {
-  font-size: 14px;
+  font-size: 12px;
   color: #6b7280;
-  margin-bottom: 14px;
-  min-height: 38px;
+  margin-bottom: 10px;
+  min-height: 34px;
 }
 
 .product-meta {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 14px;
+  gap: 8px;
+  margin-bottom: 10px;
 }
 
 .product-category {
@@ -480,7 +507,7 @@ a {
 }
 
 .product-price {
-  font-size: 18px;
+  font-size: 14px;
   font-weight: 900;
   color: #111827;
 }
@@ -488,11 +515,11 @@ a {
 .add-cart-btn {
   width: 100%;
   border: none;
-  border-radius: 12px;
+  border-radius: 10px;
   background: #ff6f61;
   color: #fff;
-  padding: 12px 16px;
-  font-size: 14px;
+  padding: 9px 12px;
+  font-size: 12px;
   font-weight: 800;
   cursor: pointer;
 }
@@ -651,7 +678,7 @@ body.drawer-open {
 
 .footer-main {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(4, minmax(220px, 1fr));
   gap: 30px;
   border-bottom: 1px solid #444;
   padding-bottom: 30px;
@@ -670,13 +697,56 @@ body.drawer-open {
   font-size: 16px;
 }
 
-.footer-col a {
+.footer-col a,
+.footer-col p {
   display: block;
   margin-bottom: 10px;
 }
 
-.footer-col a:hover {
+.footer-col a:hover,
+.footer-link:hover {
   color: white;
+}
+
+.footer-col .footer-link {
+  display: inline;
+  margin-bottom: 0;
+  color: #ffe9a0;
+  font-weight: 700;
+}
+
+.footer-location h3 {
+  margin-bottom: 15px;
+}
+
+.footer-location .location-card {
+  display: block;
+  padding: 18px;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  color: #f9f9ff;
+  transition: transform 0.2s ease, background 0.2s ease, border-color 0.2s ease;
+}
+
+.footer-location .location-card p {
+  margin-bottom: 8px;
+  line-height: 1.5;
+  color: #f0f0ff;
+}
+
+.footer-location .location-card span {
+  display: inline-block;
+  margin-top: 12px;
+  font-size: 13px;
+  color: #ffe9a0;
+  font-weight: 700;
+}
+
+.footer-location .location-card:hover {
+  background: rgba(255, 255, 255, 0.16);
+  transform: translateY(-2px);
+  border-color: rgba(255, 255, 255, 0.3);
 }
 
 .footer-bottom {
@@ -686,6 +756,10 @@ body.drawer-open {
 }
 
 @media (max-width: 900px) {
+  .footer-main {
+    grid-template-columns: repeat(2, minmax(220px, 1fr));
+  }
+
   .header-inner {
     grid-template-columns: 1fr;
   }
@@ -733,6 +807,14 @@ body.drawer-open {
 }
 
 @media (max-width: 560px) {
+  .footer-main {
+    grid-template-columns: 1fr;
+  }
+
+  .product-thumb {
+    height: 95px;
+  }
+
   .mega-sidebar {
     grid-template-columns: 1fr;
   }

@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="mn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Үйлчилгээний нөхцөл</title>
+    <style>
+        /* --- CSS START --- */
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            background-color: #f8f9fa;
+            margin: 0;
+            padding: 40px 20px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .faq-container {
+            width: 100%;
+            max-width: 1100px;
+        }
+
+        .page-title {
+            text-align: center;
+            font-size: 24px;
+            color: #222;
+            margin-bottom: 8px;
+        }
+
+        .last-updated {
+            text-align: right;
+            font-size: 13px;
+            color: #666;
+            margin-bottom: 20px;
+        }
+
+        .faq-item {
+            background: #ffffff;
+            margin-bottom: 12px;
+            border-radius: 8px;
+            box-shadow: 0 1px 4px rgba(0,0,0,0.08);
+            overflow: hidden;
+        }
+
+        .faq-header {
+            padding: 20px 25px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+
+        .faq-header:hover { background: #fafafa; }
+
+        .faq-title { font-size: 16px; color: #333; font-weight: 400; }
+
+        /* Plus/Minus Icon */
+        .icon { position: relative; width: 14px; height: 14px; }
+        .icon::before, .icon::after {
+            content: ""; position: absolute; background: #333; transition: all 0.3s ease;
+        }
+        .icon::before { width: 100%; height: 2px; top: 50%; left: 0; transform: translateY(-50%); }
+        .icon::after { width: 2px; height: 100%; left: 50%; top: 0; transform: translateX(-50%); }
+
+        /* Animation Logic */
+        .faq-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out;
+            background: #fff;
+        }
+
+        .content-inner {
+            padding: 0 25px 25px 25px;
+            font-size: 15px;
+            line-height: 1.6;
+            color: #444;
+        }
+
+        /* Active State */
+        .faq-item.active .faq-content { max-height: 1000px; }
+        .faq-item.active .icon::after { transform: translateX(-50%) rotate(90deg); opacity: 0; }
+        /* --- CSS END --- */
+    </style>
+</head>
+<body>
+
+<div class="faq-container">
+    <h1 class="page-title">Үйлчилгээний нөхцөл</h1>
+    <div class="last-updated">Сүүлд шинэчлэгдсэн 2026/1/23</div>
+
+    <div class="faq-item">
+        <div class="faq-header">
+            <span class="faq-title">1. Ерөнхий</span>
+            <span class="icon"></span>
+        </div>
+        <div class="faq-content">
+            <div class="content-inner">Энд ерөнхий нөхцөлүүд бичигдэнэ.</div>
+        </div>
+    </div>
+
+    <div class="faq-item">
+        <div class="faq-header">
+            <span class="faq-title">2. Хэрэглэгч болон бүртгүүлэх</span>
+            <span class="icon"></span>
+        </div>
+        <div class="faq-content">
+            <div class="content-inner">Хэрэглэгчийн бүртгэлтэй холбоотой мэдээлэл.</div>
+        </div>
+    </div>
+
+    <div class="faq-item">
+        <div class="faq-header">
+            <span class="faq-title">3. Захиалга хийх, баталгаажих, цуцлах хугацаа</span>
+            <span class="icon"></span>
+        </div>
+        <div class="faq-content">
+            <div class="content-inner">Захиалгын явц болон цуцлах заавар.</div>
+        </div>
+    </div>
+
+    <div class="faq-item">
+        <div class="faq-header">
+            <span class="faq-title">4. Төлбөр төлөх, захиалга цуцлах</span>
+            <span class="icon"></span>
+        </div>
+        <div class="faq-content">
+            <div class="content-inner">Төлбөрийн хэрэгсэл болон буцаалтын нөхцөл.</div>
+        </div>
+    </div>
+</div>
+
+<script>
+    document.querySelectorAll('.faq-header').forEach(header => {
+        header.addEventListener('click', () => {
+            const item = header.parentElement;
+            item.classList.toggle('active');
+            
+            // Close others (optional)
+            document.querySelectorAll('.faq-item').forEach(otherItem => {
+                if (otherItem !== item) otherItem.classList.remove('active');
+            });
+        });
+    });
+</script>
+
+</body>
+</html>

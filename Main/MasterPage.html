@@ -29,7 +29,7 @@
 
   <header class="main-header">
     <div class="container header-inner">
-      <div class="logo">shoppy</div>
+      <a class="logo" href="MasterPage.html">shoppy</a>
 
       <div class="search-area">
         <select class="search-category" id="searchCategory">
@@ -45,7 +45,7 @@
       </div>
 
       <div class="header-actions">
-        <a href="#" class="action-item">Сүүлд үзсэн</a>
+        <a href="baraa.html?view=recent" class="action-item">Сүүлд үзсэн</a>
         <a href="#" class="action-item">Хэтэвч</a>
         <a href="basket.html" class="action-item">Сагс</a>
         <button class="action-item action-button" id="userDrawerToggle" type="button">Хэрэглэгч</button>
@@ -57,8 +57,8 @@
     <div class="container menu-inner">
       <button class="category-btn" id="categoryMenuToggle" type="button" aria-expanded="false" aria-controls="categoryMega">☰ БҮХ АНГИЛАЛ</button>
       <div class="menu-links">
-        <a href="#">Нүүр</a>
-        <a href="#">Шинэ</a>
+        <a href="MasterPage.html">Нүүр</a>
+        <a href="baraa.html?view=new">Шинэ</a>
         <a href="#">Хямдрал</a>
         <a href="#">Брэндүүд</a>
         <a href="#">Тасалбар</a>
@@ -119,7 +119,7 @@
 
     <a class="drawer-link-card" href="#">
       <span>Бэлгийн картаар хэтэвч цэнэглэх</span>
-      <span>›</span>
+      <span>&gt;</span>
     </a>
 
     <a class="drawer-primary-link" href="login.html">Нэвтрэх / мэдээллээ засах</a>
@@ -153,19 +153,31 @@
 
       <div class="footer-col">
         <h3>Тусламж</h3>
-        <a href="#">Түгээмэл асуултууд (FAQ)</a>
-        <a href="#">Үйлчилгээний нөхцөл</a>
-        <a href="#">Нууцлалын бодлого</a>
+        <a href="FAQ.html">Түгээмэл асуултууд (FAQ)</a>
+        <a href="Terms.html">Үйлчилгээний нөхцөл</a>
+        <a href="privacy.html">Нууцлалын бодлого</a>
       </div>
 
       <div class="footer-col">
         <h3>Холбоо барих</h3>
-        <p>И-мэйл: order@shoppy.mn</p>
-        <p>Утас: 7777-XXXX</p>
+        <p>И-мэйл: <a href="mailto:order@shoppy.mn" class="footer-link">order@shoppy.mn</a></p>
+        <p>Утас: <a href="tel:7777XXXX" class="footer-link">7777-XXXX</a></p>
+      </div>
+
+      <div class="footer-col footer-location">
+        <h3>Хаяг</h3>
+        <a href="https://www.google.com/maps/place/IC+Tower,+Sukhbaatar,+Ulaanbaatar,+Mongolia" class="location-card" target="_blank" rel="noopener noreferrer">
+          <p>Парисын гудамж, 1-р хороо,</p>
+          <p>Сүхбаатар дүүрэг, Улаанбаатар хот,</p>
+          <p>Монгол улс Ай Си Тауэр - 1001 тоот</p>
+          <span>Google Maps дээр үзэх</span>
+        </a>
       </div>
     </div>
   </footer>
 
+  <script src="product-data.js"></script>
+  <script src="baraaniangilal.js"></script>
   <script src="MasterPage.js"></script>
 </body>
 </html>

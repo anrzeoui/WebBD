@@ -1,11 +1,22 @@
-* {
+:root {
+  --app-font: "Helvetica Neue", Arial, sans-serif;
+}
+
+html {
+  font-family: var(--app-font);
+}
+
+*,
+*::before,
+*::after {
   box-sizing: border-box;
+  font-family: inherit;
   margin: 0;
   padding: 0;
 }
 
 body {
-  font-family: "Segoe UI", Arial, sans-serif;
+  font-family: inherit;
   background: #f7f7fa;
   color: #1f2937;
 }
@@ -13,6 +24,13 @@ body {
 a {
   text-decoration: none;
   color: inherit;
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
 }
 
 .auth-topbar {

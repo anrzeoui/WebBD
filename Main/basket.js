@@ -56,7 +56,7 @@ function renderCart() {
         <select class="cart-item-select"><option>Сонголт: Хэмжээ: ${item.size}</option></select>
         <div class="cart-item-bottom">
           <span>Үлдэгдэл: 1</span>
-          <span>Хүргэлтийн нөхцөл →</span>
+          <span>Хүргэлтийн нөхцөл &gt;</span>
         </div>
       </div>
       <div class="cart-qty-wrap">

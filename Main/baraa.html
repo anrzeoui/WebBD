@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="mn">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Бараа</title>
+  <link rel="stylesheet" href="baraa.css" />
+</head>
+<body>
+  <div class="top-banner">
+    <div class="top-banner-inner">
+      <div>SUPER CONCERT</div>
+      <div>NOW AVAILABLE PHASE 2</div>
+      <div>2ND HEADLINER COMING SOON</div>
+    </div>
+  </div>
+
+  <div class="utility-bar">
+    <div class="container utility-inner">
+      <div>Shoppy-д тавтай морил</div>
+      <div class="utility-right">
+        <a href="#">Хамтран ажиллах</a>
+        <a href="#">Апп татах</a>
+        <a href="#">Тусламж</a>
+        <a href="#">Сэтгэгдэл үлдээх</a>
+      </div>
+    </div>
+  </div>
+
+  <header class="main-header">
+    <div class="container header-inner">
+      <a class="logo" href="MasterPage.html">shoppy</a>
+
+      <form class="search-area" id="catalogSearchForm">
+        <select class="search-category" id="catalogSearchCategory" aria-label="Ангилал сонгох">
+          <option value="">Бүгд</option>
+        </select>
+        <input class="search-input" id="catalogSearchInput" type="text" placeholder="Бараа, брэнд хайх..." />
+        <button class="search-btn" type="submit">Хайх</button>
+      </form>
+
+      <div class="header-actions">
+        <a href="baraa.html?view=recent" class="action-item">Сүүлд үзсэн</a>
+        <a href="#" class="action-item">Хэтэвч</a>
+        <a href="basket.html" class="action-item">Сагс</a>
+        <a href="login.html" class="action-item">Нэвтрэх</a>
+      </div>
+    </div>
+  </header>
+
+  <nav class="menu-bar">
+    <div class="container menu-inner">
+      <div class="category-menu">
+        <button
+          class="category-btn"
+          type="button"
+          id="categoryToggle"
+          aria-expanded="false"
+          aria-controls="categoryPanel"
+        >
+          <span>☰ БҮХ АНГИЛАЛ</span>
+          <span>▾</span>
+        </button>
+
+        <div class="category-dropdown" id="categoryPanel">
+          <div class="category-left" id="categoryLeft"></div>
+          <div class="category-right" id="categoryRight"></div>
+        </div>
+      </div>
+
+      <div class="menu-links">
+        <a href="MasterPage.html">Нүүр</a>
+        <a href="baraa.html">Бүх бараа</a>
+        <a href="baraa.html?view=recent">Сүүлд үзсэн</a>
+        <a href="basket.html">Сагс</a>
+      </div>
+    </div>
+  </nav>
+
+  <main class="container content-area">
+    <nav class="catalog-breadcrumb" id="catalogBreadcrumb" aria-label="breadcrumb"></nav>
+
+    <section class="catalog-hero" id="catalogHero">
+      <p class="catalog-overline">Shoppy catalog</p>
+      <h1 id="catalogHeroTitle">Бүх бараа</h1>
+      <p id="catalogHeroText">Ангилал, дэд ангилал, хайлтаар бараагаа шүүж сонгоно уу.</p>
+      <div class="catalog-hero-actions" id="catalogHeroActions"></div>
+    </section>
+
+    <section class="product-detail-section is-hidden" id="productDetailSection">
+      <div class="product-detail-card" id="productDetailCard"></div>
+    </section>
+
+    <section class="catalog-shell">
+      <aside class="catalog-sidebar">
+        <div class="catalog-sidebar-card">
+          <h2>Ангилал</h2>
+          <div class="catalog-side-list" id="catalogSideList"></div>
+        </div>
+
+        <div class="catalog-filter-card">
+          <div class="catalog-filter-head">
+            <div>
+              <p class="catalog-overline">Filter</p>
+              <h2>Дэд ангилал</h2>
+            </div>
+          </div>
+          <p>Сонгосон ангиллын доторх төрлөөр шүүнэ.</p>
+          <div class="catalog-chip-row" id="catalogChipRow"></div>
+        </div>
+      </aside>
+
+      <section class="catalog-main">
+        <section class="catalog-products-section">
+          <div class="catalog-results-header">
+            <div>
+              <p class="catalog-overline" id="catalogOverline">Results</p>
+              <h2 id="catalogTitle">Бараанууд</h2>
+            </div>
+            <span class="catalog-result-count" id="catalogCount">0 бараа</span>
+          </div>
+          <div class="product-grid" id="productGrid"></div>
+        </section>
+
+        <section class="related-products is-hidden" id="relatedProductsSection">
+          <div class="section-heading">
+            <div>
+              <p class="section-eyebrow">Similar picks</p>
+              <h2>Төстэй бараа</h2>
+            </div>
+          </div>
+          <div class="related-products-grid" id="relatedProductsGrid"></div>
+        </section>
+      </section>
+    </section>
+  </main>
+
+  <footer class="shoppy-footer">
+    <div class="container footer-main">
+      <div class="footer-col">
+        <div class="footer-logo">shoppy</div>
+        <p>Монголын хамгийн том цахим дэлгүүр</p>
+      </div>
+
+      <div class="footer-col">
+        <h3>Тусламж</h3>
+        <a href="FAQ.html">Түгээмэл асуултууд (FAQ)</a>
+        <a href="Terms.html">Үйлчилгээний нөхцөл</a>
+        <a href="privacy.html">Нууцлалын бодлого</a>
+      </div>
+
+      <div class="footer-col">
+        <h3>Холбоо барих</h3>
+        <p>И-мэйл: <a href="mailto:order@shoppy.mn" class="footer-link">order@shoppy.mn</a></p>
+        <p>Утас: <a href="tel:7777XXXX" class="footer-link">7777-XXXX</a></p>
+      </div>
+
+      <div class="footer-col footer-location">
+        <h3>Хаяг</h3>
+        <a href="https://www.google.com/maps/place/IC+Tower,+Sukhbaatar,+Ulaanbaatar,+Mongolia" class="location-card" target="_blank" rel="noopener noreferrer">
+          <p>Парисын гудамж, 1-р хороо,</p>
+          <p>Сүхбаатар дүүрэг, Улаанбаатар хот,</p>
+          <p>Монгол улс Ай Си Тауэр - 1001 тоот</p>
+          <span>Google Maps дээр үзэх</span>
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="product-data.js"></script>
+  <script src="baraaniangilal.js"></script>
+  <script src="baraa.js"></script>
+</body>
+</html>
