@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="mn">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Shoppy Wallet</title>
+  <link rel="stylesheet" href="Wallet.css" />
+</head>
+<body>
+  <header class="wallet-header">
+    <div class="wallet-header-inner">
+      <a class="wallet-logo" href="MasterPage.html">shoppy</a>
+      <nav class="wallet-nav" aria-label="Wallet navigation">
+        <a href="MasterPage.html">Нүүр</a>
+        <a href="baraa.html">Бараа</a>
+        <a href="basket.html">Сагс</a>
+        <a href="login.html">Нэвтрэх</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="wallet-page">
+    <section class="wallet-hero">
+      <div>
+        <p class="wallet-eyebrow">shoppy хэтэвч</p>
+        <h1>Таны төлбөрийн хурдан, найдвартай туслах</h1>
+        <p class="wallet-lead">Хэтэвчээ цэнэглээд захиалга, буцаалт, урамшууллын үлдэгдлээ нэг дороос хянаарай.</p>
+      </div>
+
+      <section class="wallet-card" aria-label="Хэтэвчийн үлдэгдэл">
+        <div class="wallet-card-top">
+          <span>shoppy wallet</span>
+          <span class="wallet-chip">MN</span>
+        </div>
+        <p>Үлдэгдэл</p>
+        <strong id="walletBalance">0 ₮</strong>
+        <div class="wallet-card-bottom">
+          <span id="walletUserName">Хэрэглэгч</span>
+          <span>•••• 2026</span>
+        </div>
+      </section>
+    </section>
+
+    <section class="wallet-grid">
+      <section class="wallet-panel wallet-charge-panel">
+        <div class="wallet-panel-head">
+          <div>
+            <p class="wallet-eyebrow">Цэнэглэх</p>
+            <h2>Дүн сонгох</h2>
+          </div>
+          <span class="wallet-status">Идэвхтэй</span>
+        </div>
+
+        <div class="amount-grid" id="amountGrid">
+          <button type="button" data-amount="10000">10,000 ₮</button>
+          <button type="button" data-amount="20000">20,000 ₮</button>
+          <button type="button" data-amount="50000">50,000 ₮</button>
+          <button type="button" data-amount="100000">100,000 ₮</button>
+        </div>
+
+        <label class="custom-amount">
+          <span>Өөр дүн</span>
+          <input id="customAmount" type="number" min="1000" step="1000" placeholder="Дүн оруулах" />
+        </label>
+
+        <button class="wallet-primary-btn" id="topUpBtn" type="button">Хэтэвч цэнэглэх</button>
+        <p class="wallet-note" id="walletMessage">Карт, шилжүүлэг болон урамшууллын эрхээр цэнэглэх боломжтой.</p>
+      </section>
+
+      <section class="wallet-panel wallet-info-panel">
+        <div class="wallet-panel-head">
+          <div>
+            <p class="wallet-eyebrow">Мэдээлэл</p>
+            <h2>Хэтэвчийн боломж</h2>
+          </div>
+        </div>
+
+        <div class="feature-list">
+          <div class="feature-item">
+            <span>₮</span>
+            <div>
+              <h3>Хурдан төлбөр</h3>
+              <p>Сагсан дахь бараагаа хэтэвчийн үлдэгдлээр шууд төлнө.</p>
+            </div>
+          </div>
+          <div class="feature-item">
+            <span>%</span>
+            <div>
+              <h3>Урамшуулал</h3>
+              <p>Буцаалт болон бонус үлдэгдэл хэтэвчинд нэмэгдэнэ.</p>
+            </div>
+          </div>
+          <div class="feature-item">
+            <span>✓</span>
+            <div>
+              <h3>Гүйлгээний түүх</h3>
+              <p>Цэнэглэлт, төлбөрийн мэдээллээ нэг дэлгэцээс харна.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </section>
+
+    <section class="wallet-panel">
+      <div class="wallet-panel-head">
+        <div>
+          <p class="wallet-eyebrow">Түүх</p>
+          <h2>Сүүлийн гүйлгээнүүд</h2>
+        </div>
+        <a class="wallet-small-link" href="basket.html">Сагс руу очих</a>
+      </div>
+
+      <div class="transaction-list" id="transactionList">
+        <div class="transaction-item">
+          <div>
+            <strong>Хэтэвч нээгдсэн</strong>
+            <span>Өнөөдөр</span>
+          </div>
+          <b>0 ₮</b>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="Wallet.js"></script>
+</body>
+</html>

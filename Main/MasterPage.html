@@ -19,10 +19,10 @@
     <div class="container utility-inner">
       <div>Шоппид тавтай морил</div>
       <div class="utility-right">
-        <a href="#">Хамтран ажиллах</a>
-        <a href="#">Апп татах</a>
-        <a href="#">Тусламж</a>
-        <a href="#">Сэтгэгдэл үлдээх</a>
+        <a href="register.html">Хамтран ажиллах</a>
+        <a href="Wallet.html">Апп татах</a>
+        <a href="faq.html">Тусламж</a>
+        <a href="privacy.html">Сэтгэгдэл үлдээх</a>
       </div>
     </div>
   </div>
@@ -46,7 +46,7 @@
 
       <div class="header-actions">
         <a href="baraa.html?view=recent" class="action-item">Сүүлд үзсэн</a>
-        <a href="#" class="action-item">Хэтэвч</a>
+        <a href="Wallet.html" class="action-item">Хэтэвч</a>
         <a href="basket.html" class="action-item">Сагс</a>
         <button class="action-item action-button" id="userDrawerToggle" type="button">Хэрэглэгч</button>
       </div>
@@ -59,9 +59,9 @@
       <div class="menu-links">
         <a href="MasterPage.html">Нүүр</a>
         <a href="baraa.html?view=new">Шинэ</a>
-        <a href="#">Хямдрал</a>
-        <a href="#">Брэндүүд</a>
-        <a href="#">Тасалбар</a>
+        <a href="baraa.html?q=хямдрал">Хямдрал</a>
+        <a href="baraa.html">Брэндүүд</a>
+        <a href="baraa.html?category=tech">Технологи</a>
       </div>
     </div>
 
@@ -86,20 +86,109 @@
     </div>
   </nav>
 
-  <main class="container content-area">
-    <div class="empty-body" id="searchState">
-      <h1>Shoppy main page</h1>
+  <main class="content-area">
+    <div class="container">
+      <div class="home-page" id="searchState">
+        <section class="home-hero">
+          <div class="hero-main">
+            <div>
+              <p class="hero-kicker">Онцлох худалдаа</p>
+              <h1>Өдөр тутмын хэрэгцээгээ нэг дороос</h1>
+              <p class="hero-text">Хувцас, гоо сайхан, технологи, гэр ахуйн бараагаа ангиллаар шүүж сонгоод сагсандаа шууд нэмээрэй.</p>
+              <div class="hero-actions">
+                <a class="hero-primary" href="baraa.html">Бүх бараа үзэх</a>
+                <a class="hero-secondary" href="baraa.html?view=new">Шинэ бараа</a>
+              </div>
+            </div>
+            <div class="hero-product-stack" aria-label="Онцлох бараанууд">
+              <a class="hero-product-card hero-product-card-main" href="baraa.html?id=tech-laptop-lenovo">
+                <span>Lenovo laptop</span>
+                <strong>2,490,000 ₮</strong>
+                <img src="pictures/smartwatch-card.svg" alt="Laptop" />
+              </a>
+              <a class="hero-product-card" href="baraa.html?id=women-bag-charles">
+                <span>Charles & Keith</span>
+                <strong>210,000 ₮</strong>
+                <img src="pictures/bag-card.svg" alt="Гар цүнх" />
+              </a>
+            </div>
+          </div>
 
-      <p>Дээрх хайлтаар бараа, брэнд, ангиллаа шүүж туршиж болно.</p>
-    </div>
+          <aside class="hero-side">
+            <a class="side-promo side-promo-orange" href="Wallet.html">
+              <span>shoppy wallet</span>
+              <strong>Цэнэглээд хурдан төл</strong>
+            </a>
+            <a class="side-promo side-promo-light" href="baraa.html?category=cosmetics">
+              <span>Beauty week</span>
+              <strong>Гоо сайхны сонголт</strong>
+            </a>
+          </aside>
+        </section>
 
-    <section class="results-wrap hidden" id="resultsWrap">
-      <div class="results-head">
-        <h2 id="resultsTitle">Хайлтын илэрц</h2>
-        <span id="resultsCount">0 бараа</span>
+        <section class="quick-services" aria-label="Shoppy үйлчилгээ">
+          <a href="basket.html">
+            <span>🛒</span>
+            <strong>Сагс</strong>
+            <small>Сонгосон бараагаа шалгах</small>
+          </a>
+          <a href="Wallet.html">
+            <span>₮</span>
+            <strong>Хэтэвч</strong>
+            <small>Үлдэгдэл цэнэглэх</small>
+          </a>
+          <a href="address.html">
+            <span>📍</span>
+            <strong>Хаяг</strong>
+            <small>Хүргэлтийн мэдээлэл</small>
+          </a>
+          <a href="faq.html">
+            <span>?</span>
+            <strong>Тусламж</strong>
+            <small>Асуулт, хариулт</small>
+          </a>
+        </section>
+
+        <section class="home-section">
+          <div class="section-title-row">
+            <div>
+              <p class="section-kicker">Ангилал</p>
+              <h2>Юу хайж байна?</h2>
+            </div>
+            <a href="baraa.html">Бүгдийг үзэх</a>
+          </div>
+          <div class="home-category-grid" id="homeCategoryGrid"></div>
+        </section>
+
+        <section class="home-section home-deal-band">
+          <div>
+            <p class="section-kicker">Өнөөдрийн санал</p>
+            <h2>Сонгосон бараануудаа сагсанд шууд нэм</h2>
+            <p>Онцлох бүтээгдэхүүнүүд дээр дарж дэлгэрэнгүй үзэх эсвэл доорх товчоор сагсанд нэмнэ.</p>
+          </div>
+          <a href="baraa.html?view=new">Шинэ бараа үзэх</a>
+        </section>
+
+        <section class="home-section">
+          <div class="section-title-row">
+            <div>
+              <p class="section-kicker">Онцлох</p>
+              <h2>Эрэлттэй бараанууд</h2>
+            </div>
+            <a href="baraa.html">Каталог руу</a>
+          </div>
+          <div class="featured-product-grid" id="featuredProductGrid"></div>
+        </section>
       </div>
-      <div class="results-grid" id="searchResults"></div>
-    </section>
+
+      <section class="results-wrap hidden" id="resultsWrap">
+        <div class="results-head">
+          <h2 id="resultsTitle">Хайлтын илэрц</h2>
+          <span id="resultsCount">0 бараа</span>
+        </div>
+        <div class="results-grid" id="searchResults"></div>
+      </section>
+    </div>
   </main>
 
   <div class="user-drawer-overlay hidden" id="userDrawerOverlay"></div>
@@ -111,13 +200,13 @@
       <p id="drawerUserEmail">user@example.com</p>
     </div>
 
-    <div class="drawer-wallet-card">
+    <a class="drawer-wallet-card" href="Wallet.html">
       <div class="drawer-wallet-brand">shoppy хэтэвч</div>
       <div class="drawer-wallet-label">Үлдэгдэл</div>
       <div class="drawer-wallet-balance">0 ₮</div>
-    </div>
+    </a>
 
-    <a class="drawer-link-card" href="#">
+    <a class="drawer-link-card" href="Wallet.html">
       <span>Бэлгийн картаар хэтэвч цэнэглэх</span>
       <span>&gt;</span>
     </a>
@@ -153,7 +242,7 @@
 
       <div class="footer-col">
         <h3>Тусламж</h3>
-        <a href="FAQ.html">Түгээмэл асуултууд (FAQ)</a>
+        <a href="faq.html">Түгээмэл асуултууд (FAQ)</a>
         <a href="Terms.html">Үйлчилгээний нөхцөл</a>
         <a href="privacy.html">Нууцлалын бодлого</a>
       </div>

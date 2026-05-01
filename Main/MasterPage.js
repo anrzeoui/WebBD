@@ -24,6 +24,8 @@ const userDrawerOverlay = document.getElementById("userDrawerOverlay");
 const userDrawerClose = document.getElementById("userDrawerClose");
 const drawerUserName = document.getElementById("drawerUserName");
 const drawerUserEmail = document.getElementById("drawerUserEmail");
+const drawerWalletBalance = document.querySelector(".drawer-wallet-balance");
+const featuredProductGrid = document.getElementById("featuredProductGrid");
 let activeMegaCategoryId = megaCategories[0]?.id || "";
 
 function normalizePrice(priceText) {
@@ -54,10 +56,16 @@ function getCategoryProducts(category) {
   const categoryTerm = normalizeText(category.searchCategory || category.title);
 
   return products.filter((product) => {
+    const categoryIds = product.categoryIds || [product.categoryId];
     const productCategory = normalizeText(product.category);
     const productText = getProductText(product);
 
-    return productCategory.includes(categoryTerm) || productText.includes(categoryTerm);
+    return (
+      categoryIds.includes(category.id) ||
+      categoryIds.includes(category.searchCategory) ||
+      productCategory.includes(categoryTerm) ||
+      productText.includes(categoryTerm)
+    );
   });
 }
 
@@ -158,7 +166,11 @@ function filterProducts() {
   }
 
   const filtered = products.filter((product) => {
-    const categoryMatch = isAllCategory || normalizeText(product.category).includes(category);
+    const categoryIds = product.categoryIds || [product.categoryId];
+    const categoryMatch =
+      isAllCategory ||
+      normalizeText(product.category).includes(category) ||
+      categoryIds.some((categoryId) => normalizeText(categoryId) === category);
     const text = getProductText(product);
 
     return categoryMatch && (!term || text.includes(term));
@@ -290,7 +302,7 @@ function showActiveCategoryResults() {
 }
 
 function addToCart(productId) {
-  const product = products.find((item) => item.id === productId);
+  const product = products.find((item) => item.id === String(productId));
   if (!product) {
     return;
   }
@@ -354,6 +366,14 @@ function syncUserDrawer() {
   const savedUser = JSON.parse(localStorage.getItem("registeredUser") || "null");
   const userName = savedUser?.name?.trim() || "Хэрэглэгч";
   const userEmail = savedUser?.email?.trim() || "user@example.com";
+  let walletBalance = 0;
+
+  try {
+    const savedWallet = JSON.parse(localStorage.getItem("shoppyWallet") || "null");
+    walletBalance = Number(savedWallet?.balance || 0);
+  } catch {
+    walletBalance = 0;
+  }
 
   if (drawerUserName) {
     drawerUserName.textContent = userName;
@@ -365,6 +385,10 @@ function syncUserDrawer() {
 
   if (userDrawerToggle) {
     userDrawerToggle.textContent = userName;
+  }
+
+  if (drawerWalletBalance) {
+    drawerWalletBalance.textContent = `${walletBalance.toLocaleString("mn-MN")} ₮`;
   }
 }
 
@@ -387,7 +411,19 @@ if (searchResults) {
       return;
     }
 
-    addToCart(Number(button.dataset.productId));
+    addToCart(button.dataset.productId);
+  });
+}
+
+if (featuredProductGrid) {
+  featuredProductGrid.addEventListener("click", (event) => {
+    const button = event.target.closest("[data-product-id]");
+    if (!button) {
+      return;
+    }
+
+    event.preventDefault();
+    addToCart(button.dataset.productId);
   });
 }
 

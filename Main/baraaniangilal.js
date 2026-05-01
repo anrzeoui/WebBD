@@ -235,10 +235,11 @@ function renderFeaturedProductGrid() {
   grid.innerHTML = products
     .map(
       (product) => `
-        <article class="product-card">
-          <a class="product-card-link" href="baraa.html?id=${product.id}">
-            <div class="product-card-media" style="background: linear-gradient(135deg, ${product.colorA}, ${product.colorB});">
-              ${product.initials || product.brand}
+        <article class="product-card home-product-card">
+          <a class="product-card-link" href="baraa.html?id=${product.id}" aria-label="${product.name} дэлгэрэнгүй">
+            <div class="product-card-media" style="--color-a:${product.colorA}; --color-b:${product.colorB};">
+              <img src="${product.image}" alt="${product.name}" />
+              <span>${product.brand}</span>
             </div>
             <div class="product-card-body">
               <span class="product-card-brand">${product.brand}</span>
@@ -250,6 +251,7 @@ function renderFeaturedProductGrid() {
               </div>
             </div>
           </a>
+          <button class="add-cart-btn" type="button" data-product-id="${product.id}">Сагсанд нэмэх</button>
         </article>
       `
     )
